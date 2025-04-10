@@ -1,0 +1,1060 @@
+{
+  "signatures": [
+	{
+	  "name": "SafeSigned",
+	  "category": "Email Security",
+	  "description": "SafeSigned email security and signature service",
+	  "recordTypes": ["TXT"],
+	  "patterns": [
+		"include:safesigned\\.com"
+	  ],
+	  "website": "https://safesigned.com"
+	},
+	{
+	  "name": "NSEC3 DNSSEC",
+	  "category": "DNS Security",
+	  "description": "DNSSEC with NSEC3 (hashed) authenticated denial of existence",
+	  "recordTypes": ["NSEC3PARAM"],
+	  "patterns": [
+		".*NSEC3PARAM.*"
+	  ],
+	  "website": "https://www.cloudflare.com/dns/dnssec/how-dnssec-works/"
+	},
+    {
+      "name": "Pardot Sending Domain",
+      "category": "Marketing Automation",
+      "description": "Salesforce Pardot email sending domain verification",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "sending_domain[0-9]+=.*"
+      ],
+      "website": "https://www.pardot.com"
+    },
+    {
+      "name": "Twilio",
+      "category": "Communication",
+      "description": "Twilio cloud communications platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "twilio-domain-verification=.*"
+      ],
+      "website": "https://www.twilio.com"
+    },
+    {
+      "name": "Miro",
+      "category": "Collaboration",
+      "description": "Miro online collaborative whiteboarding platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "miro-verification=.*"
+      ],
+      "website": "https://miro.com"
+    },
+    {
+      "name": "Cisco CI",
+      "category": "Cloud Integration",
+      "description": "Cisco Cloud Integration services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cisco-ci-domain-verification=.*"
+      ],
+      "website": "https://www.cisco.com/c/en/us/solutions/cloud/overview.html"
+    },
+    {
+      "name": "Docker",
+      "category": "Development",
+      "description": "Docker container platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "docker-verification=.*"
+      ],
+      "website": "https://www.docker.com"
+    },
+    {
+      "name": "SAP SuccessFactors",
+      "category": "HR & Recruiting",
+      "description": "SAP SuccessFactors human capital management suite",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "successfactors-site-verification=.*"
+      ],
+      "website": "https://www.sap.com/products/human-resources-hcm/successfactors.html"
+    },
+    {
+      "name": "MongoDB",
+      "category": "Database",
+      "description": "MongoDB database platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mongodb-site-verification=.*"
+      ],
+      "website": "https://www.mongodb.com"
+    },
+    {
+      "name": "MindManager",
+      "category": "Productivity",
+      "description": "MindManager mind mapping and information visualization software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mindmanager-verification=.*"
+      ],
+      "website": "https://www.mindmanager.com"
+    },
+    {
+      "name": "OpenAI",
+      "category": "AI & Machine Learning",
+      "description": "OpenAI artificial intelligence research laboratory",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "openai-domain-verification=.*"
+      ],
+      "website": "https://openai.com"
+    },
+    {
+      "name": "Adobe IDP",
+      "category": "Identity Management",
+      "description": "Adobe Identity Provider services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "adobe-idp-site-verification=.*"
+      ],
+      "website": "https://www.adobe.com/enterprise/identity.html"
+    },
+    {
+      "name": "Smartsheet",
+      "category": "Project Management",
+      "description": "Smartsheet work management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "smartsheet-site-validation=.*"
+      ],
+      "website": "https://www.smartsheet.com"
+    },
+    {
+      "name": "Klaviyo",
+      "category": "Marketing Automation",
+      "description": "Klaviyo customer data and marketing automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "klaviyo-site-verification=.*"
+      ],
+      "website": "https://www.klaviyo.com"
+    },
+    {
+      "name": "Axway Amplify",
+      "category": "API Management",
+      "description": "Axway Amplify API management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "axway-amplify=.*"
+      ],
+      "website": "https://www.axway.com/en/products/amplify-api-management-platform"
+    },
+    {
+      "name": "Atlassian Sending Domain",
+      "category": "Business Tools",
+      "description": "Atlassian email sending domain verification",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "atlassian-sending-domain-verification=.*"
+      ],
+      "website": "https://www.atlassian.com"
+    },
+    {
+      "name": "Fireflies.ai",
+      "category": "Meeting Intelligence",
+      "description": "Fireflies.ai meeting transcription and intelligence",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "fireflies-verification=.*"
+      ],
+      "website": "https://fireflies.ai"
+    },
+    {
+      "name": "Google Certificate Authority",
+      "category": "SSL Certificate",
+      "description": "Google Trust Services certificate authority",
+      "recordTypes": ["CAA"],
+      "patterns": [
+        "0 issue \"pki\\.goog.*\"",
+        "0 issuewild \"pki\\.goog.*\""
+      ],
+      "website": "https://pki.goog/"
+    },
+    {
+      "name": "Amazon SES",
+      "category": "Email Delivery",
+      "description": "Amazon Simple Email Service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:amazonses\\.com"
+      ],
+      "website": "https://aws.amazon.com/ses/"
+    },
+    {
+      "name": "Qualtrics",
+      "category": "Survey & Research",
+      "description": "Qualtrics survey and experience management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.qualtrics\\.com"
+      ],
+      "website": "https://www.qualtrics.com"
+    },
+    {
+      "name": "SpyCloud",
+      "category": "Security",
+      "description": "SpyCloud account takeover prevention and fraud detection",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "spycloud-domain-verification=.*"
+      ],
+      "website": "https://spycloud.com"
+    },
+    {
+      "name": "HubSpot Developer",
+      "category": "Marketing & CRM",
+      "description": "HubSpot developer platform integration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "hubspot-developer-verification=.*"
+      ],
+      "website": "https://developers.hubspot.com"
+    },
+    {
+      "name": "SonaType OSSRH",
+      "category": "Development",
+      "description": "Sonatype OSS Repository Hosting for Maven Central",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "^OSSRH-[0-9]+$"
+      ],
+      "website": "https://central.sonatype.org/publish/requirements/coordinates/"
+    },
+    {
+      "name": "KnowBe4 Site Verification",
+      "category": "Security Training",
+      "description": "KnowBe4 security awareness training website integration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "knowbe4-site-verification=.*"
+      ],
+      "website": "https://www.knowbe4.com"
+    },
+    {
+      "name": "MessageGears",
+      "category": "Email Marketing",
+      "description": "MessageGears email marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.messagegears\\.net"
+      ],
+      "website": "https://messagegears.com"
+    },
+    {
+      "name": "DocuSign Extended",
+      "category": "Document Management",
+      "description": "DocuSign electronic signature platform with expanded configuration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:docusign\\.net",
+        "include:_spf[ABC]\\.docusign\\.com"
+      ],
+      "website": "https://www.docusign.com"
+    },
+    {
+      "name": "Dyn Email Delivery",
+      "category": "Email Delivery",
+      "description": "Oracle Dyn email delivery service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.dynect\\.net"
+      ],
+      "website": "https://www.oracle.com/cloud/networking/dns/"
+    },
+    {
+      "name": "SIPgate",
+      "category": "VoIP & Communications",
+      "description": "SIPgate VoIP and telephony services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "sipgate_domain_verification=.*"
+      ],
+      "website": "https://www.sipgate.com"
+    },
+    {
+      "name": "Mailgun",
+      "category": "Email API",
+      "description": "Mailgun email delivery service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mgverify=.*"
+      ],
+      "website": "https://www.mailgun.com"
+    },
+    {
+      "name": "Mailjet",
+      "category": "Email Marketing",
+      "description": "Mailjet email marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.mailjet\\.com"
+      ],
+      "website": "https://www.mailjet.com"
+    },
+    {
+      "name": "Dynamics 365 Marketing",
+      "category": "Marketing Automation",
+      "description": "Microsoft Dynamics 365 Marketing automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "d365mktkey=.*"
+      ],
+      "website": "https://dynamics.microsoft.com/en-us/marketing/"
+    },
+    {
+      "name": "Cloudflare Enterprise IP",
+      "category": "CDN & Security",
+      "description": "Cloudflare Enterprise CDN with dedicated IP ranges",
+      "recordTypes": ["A"],
+      "patterns": [
+        "^141\\.193\\.[0-9]{1,3}\\.[0-9]{1,3}$"
+      ],
+      "website": "https://www.cloudflare.com/enterprise/"
+    },
+    {
+      "name": "Duo Security",
+      "category": "Authentication",
+      "description": "Duo Security multi-factor authentication",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "duo_sso_verification=.*"
+      ],
+      "website": "https://duo.com"
+    },
+    {
+      "name": "GlobalSign",
+      "category": "SSL Certificate",
+      "description": "GlobalSign SSL certificate provider",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "_globalsign-domain-verification=.*"
+      ],
+      "website": "https://www.globalsign.com"
+    },
+    {
+      "name": "HubSpot",
+      "category": "Marketing",
+      "description": "HubSpot marketing and CRM platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:[0-9]+\\.spf[0-9]+\\.hubspotemail\\.net"
+      ],
+      "website": "https://www.hubspot.com"
+    },
+    {
+      "name": "FreshMail",
+      "category": "Email Marketing",
+      "description": "FreshMail email marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.freshmail\\.pl"
+      ],
+      "website": "https://freshmail.com"
+    },
+    {
+      "name": "Greenhouse",
+      "category": "HR & Recruiting",
+      "description": "Greenhouse applicant tracking and recruiting software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:mg-spf\\.greenhouse\\.io"
+      ],
+      "website": "https://www.greenhouse.io"
+    },
+    {
+      "name": "KnowBe4",
+      "category": "Security Training",
+      "description": "KnowBe4 security awareness training platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.psm\\.knowbe4\\.com"
+      ],
+      "website": "https://www.knowbe4.com"
+    },
+    {
+      "name": "Salesforce",
+      "category": "CRM",
+      "description": "Salesforce customer relationship management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.salesforce\\.com"
+      ],
+      "website": "https://www.salesforce.com"
+    },
+    {
+      "name": "DocuSign",
+      "category": "Document Management",
+      "description": "DocuSign electronic signature and document management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "docusign=[a-f0-9\\-]+"
+      ],
+      "website": "https://www.docusign.com"
+    },
+    {
+      "name": "LogMeIn",
+      "category": "Remote Access",
+      "description": "LogMeIn remote access and collaboration software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "logmein-verification-code=[a-f0-9\\-]+"
+      ],
+      "website": "https://www.logmein.com"
+    },
+    {
+      "name": "Drift",
+      "category": "Marketing & Sales",
+      "description": "Drift conversational marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "drift-domain-verification=[a-f0-9]+"
+      ],
+      "website": "https://www.drift.com"
+    },
+    {
+      "name": "Pardot",
+      "category": "Marketing Automation",
+      "description": "Salesforce Pardot marketing automation",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "pardot_[0-9]+_\\*=[a-f0-9]+"
+      ],
+      "website": "https://www.pardot.com"
+    },
+    {
+      "name": "Marketo",
+      "category": "Marketing Automation",
+      "description": "Marketo marketing automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:mktomail\\.com"
+      ],
+      "website": "https://www.marketo.com"
+    },
+    {
+      "name": "Cloudflare DNSSEC",
+      "category": "DNS Security",
+      "description": "Cloudflare managed DNSSEC implementation",
+      "recordTypes": ["CDS", "CDNSKEY"],
+      "patterns": [
+        ".*CDNSKEY.*",
+        ".*CDS.*"
+      ],
+      "website": "https://developers.cloudflare.com/dns/additional-options/dnssec"
+    },
+    {
+      "name": "GoDaddy SSL Certificate",
+      "category": "SSL Certificate",
+      "description": "GoDaddy SSL certificate provider",
+      "recordTypes": ["CAA"],
+      "patterns": [
+        "0 issue \"godaddy\\.com\""
+      ],
+      "website": "https://www.godaddy.com/web-security/ssl-certificate"
+    },
+    {
+      "name": "Microsoft 365",
+      "category": "Email & Collaboration",
+      "description": "Microsoft 365 (formerly Office 365) email services",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        ".*\\.mail\\.protection\\.outlook\\.com\\.$",
+        "include:spf\\.protection\\.outlook\\.com"
+      ],
+      "website": "https://www.microsoft.com/en-us/microsoft-365"
+    },
+    {
+      "name": "DKIM",
+      "category": "Email Security",
+      "description": "DomainKeys Identified Mail for email authentication",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "^[a-zA-Z0-9+/]{43}==$"
+      ],
+      "website": "https://dmarcian.com/dkim-overview/"
+    },
+    {
+      "name": "Microsoft Authentication",
+      "category": "Authentication",
+      "description": "Microsoft authentication verification records",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "^[a-z0-9]{26}$"
+      ],
+      "website": "https://learn.microsoft.com/en-us/microsoft-365/admin/setup/add-domain"
+    },
+    {
+      "name": "Stripe",
+      "category": "Payment Processing",
+      "description": "Stripe payment processing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "stripe-verification=.*"
+      ],
+      "website": "https://stripe.com"
+    },
+    {
+      "name": "Zendesk",
+      "category": "Customer Support",
+      "description": "Zendesk customer service platform",
+      "recordTypes": ["TXT", "CNAME", "MX"],
+      "patterns": [
+        "include:mail\\.zendesk\\.com",
+        "\\.zendesk\\.com$"
+      ],
+      "website": "https://www.zendesk.com"
+    },
+    {
+      "name": "Cloudflare DNS",
+      "category": "DNS Hosting",
+      "description": "Cloudflare DNS hosting service",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "\\.ns\\.cloudflare\\.com\\.$"
+      ],
+      "website": "https://www.cloudflare.com/dns/"
+    },
+    {
+      "name": "Google Workspace",
+      "category": "Email & Collaboration",
+      "description": "Google Workspace (formerly G Suite) email services",
+      "recordTypes": ["MX"],
+      "patterns": [
+        "aspmx\\.l\\.google\\.com\\.$",
+        "alt[0-9]+\\.aspmx\\.l\\.google\\.com\\.$",
+        "aspmx[0-9]+\\.googlemail\\.com\\.$"
+      ],
+      "website": "https://workspace.google.com"
+    },
+    {
+      "name": "Google Site Verification",
+      "category": "Domain Verification",
+      "description": "Verifies domain ownership for Google services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "google-site-verification=.*"
+      ],
+      "website": "https://support.google.com/webmasters/answer/9008080"
+    },
+    {
+      "name": "Google Workspace Recovery",
+      "category": "Email & Collaboration",
+      "description": "Google Workspace domain recovery mechanism",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "google-gws-recovery-domain-verification=.*"
+      ],
+      "website": "https://workspace.google.com"
+    },
+    {
+      "name": "Apple Domain Verification",
+      "category": "Domain Verification",
+      "description": "Verifies domain ownership for Apple services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "apple-domain-verification=.*"
+      ],
+      "website": "https://support.apple.com"
+    },
+    {
+      "name": "Yahoo Domain Verification",
+      "category": "Domain Verification",
+      "description": "Verifies domain ownership for Yahoo services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "yahoo-verification-key=.*"
+      ],
+      "website": "https://help.yahoo.com"
+    },
+    {
+      "name": "Microsoft 365",
+      "category": "Email & Collaboration",
+      "description": "Microsoft 365 (formerly Office 365) email services",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "outlook\\.com$",
+        "protection\\.outlook\\.com$",
+        "ms=ms\\d+",
+        "MS=ms\\d+"
+      ],
+      "website": "https://www.microsoft.com/en-us/microsoft-365"
+    },
+    {
+      "name": "Google Workspace",
+      "category": "Email & Collaboration",
+      "description": "Google Workspace (formerly G Suite) email services",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "google\\.com$",
+        "googlemail\\.com$",
+        "google-smtp-in\\.l\\.google\\.com"
+      ],
+      "website": "https://workspace.google.com"
+    },
+    {
+      "name": "SPF",
+      "category": "Email Security",
+      "description": "Sender Policy Framework for email authentication",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=spf1\\s.*"
+      ],
+      "website": "https://dmarcian.com/spf-overview/"
+    },
+    {
+      "name": "DKIM",
+      "category": "Email Security",
+      "description": "DomainKeys Identified Mail for email authentication",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=DKIM1.*",
+        "k=rsa.*p=.*"
+      ],
+      "website": "https://dmarcian.com/dkim-overview/"
+    },
+    {
+      "name": "DMARC",
+      "category": "Email Security",
+      "description": "Domain-based Message Authentication, Reporting & Conformance",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=DMARC1.*"
+      ],
+      "website": "https://dmarcian.com/dmarc-overview/"
+    },
+    {
+      "name": "Shopify",
+      "category": "E-commerce",
+      "description": "Shopify e-commerce platform",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "shops\\.myshopify\\.com$",
+        "\\.shopify\\.com$"
+      ],
+      "website": "https://www.shopify.com"
+    },
+    {
+      "name": "Cloudflare",
+      "category": "CDN & Security",
+      "description": "Cloudflare CDN and security services",
+      "recordTypes": ["NS", "TXT"],
+      "patterns": [
+        "\\.ns\\.cloudflare\\.com$",
+        "cloudflare-verify.*"
+      ],
+      "website": "https://www.cloudflare.com"
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud Services",
+      "description": "Amazon Web Services cloud platform",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "\\.amazonaws\\.com$",
+        "\\.awsdns-\\d+\\.org$",
+        "\\.awsdns-\\d+\\.com$",
+        "\\.awsdns-\\d+\\.net$",
+        "\\.awsdns-\\d+\\.co\\.uk$"
+      ],
+      "website": "https://aws.amazon.com"
+    },
+    {
+      "name": "Fastly",
+      "category": "CDN",
+      "description": "Fastly content delivery network",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.fastly\\.net$",
+        "\\.global\\.fastly\\.net$"
+      ],
+      "website": "https://www.fastly.com"
+    },
+    {
+      "name": "GitHub Pages",
+      "category": "Web Hosting",
+      "description": "GitHub Pages static site hosting",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "github\\.io$",
+        "github\\.map\\.fastly\\.net$"
+      ],
+      "website": "https://pages.github.com"
+    },
+    {
+      "name": "Zendesk",
+      "category": "Customer Support",
+      "description": "Zendesk customer service platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.zendesk\\.com$"
+      ],
+      "website": "https://www.zendesk.com"
+    },
+    {
+      "name": "Mailchimp",
+      "category": "Email Marketing",
+      "description": "Mailchimp email marketing platform",
+      "recordTypes": ["TXT", "CNAME"],
+      "patterns": [
+        "k1._domainkey\\..*\\.mc\\.mailchimp\\.com$",
+        "mailchimp\\.com$"
+      ],
+      "website": "https://mailchimp.com"
+    },
+    {
+      "name": "Salesforce",
+      "category": "CRM",
+      "description": "Salesforce customer relationship management",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.salesforce\\.com$",
+        "salesforce-domain-verification=.*"
+      ],
+      "website": "https://www.salesforce.com"
+    },
+    {
+      "name": "HubSpot",
+      "category": "Marketing",
+      "description": "HubSpot marketing platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.hs-sites\\.com$",
+        "hubspot-domain-verification=.*"
+      ],
+      "website": "https://www.hubspot.com"
+    },
+    {
+      "name": "Facebook Domain Verification",
+      "category": "Social Media",
+      "description": "Facebook domain verification for integration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "facebook-domain-verification=.*"
+      ],
+      "website": "https://developers.facebook.com"
+    },
+    {
+      "name": "LinkedIn Domain Verification",
+      "category": "Social Media",
+      "description": "LinkedIn domain verification for integration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "linkedin-domain-verification=.*"
+      ],
+      "website": "https://www.linkedin.com/help"
+    },
+    {
+      "name": "Twitter/X Domain Verification",
+      "category": "Social Media",
+      "description": "Twitter/X domain verification for integration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "twitter-domain-verification=.*"
+      ],
+      "website": "https://help.twitter.com"
+    },
+    {
+      "name": "Webex",
+      "category": "Communication",
+      "description": "Cisco Webex communication platform",
+      "recordTypes": ["TXT", "CNAME"],
+      "patterns": [
+        "webexdomainverification\\..*=.*",
+        "ciscocidomainverification=.*"
+      ],
+      "website": "https://www.webex.com"
+    },
+    {
+      "name": "Zoom",
+      "category": "Communication",
+      "description": "Zoom video conferencing",
+      "recordTypes": ["TXT", "CNAME"],
+      "patterns": [
+        "zoom-domain-verification=.*"
+      ],
+      "website": "https://zoom.us"
+    },
+    {
+      "name": "Atlassian",
+      "category": "Business Tools",
+      "description": "Atlassian products (Jira, Confluence, etc.)",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.atlassian\\.net$",
+        "atlassian-domain-verification=.*"
+      ],
+      "website": "https://www.atlassian.com"
+    },
+    {
+      "name": "Netlify",
+      "category": "Web Hosting",
+      "description": "Netlify web hosting platform",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "\\.netlify\\.app$",
+        "\\.netlify\\.com$"
+      ],
+      "website": "https://www.netlify.com"
+    },
+    {
+      "name": "Vercel",
+      "category": "Web Hosting",
+      "description": "Vercel web hosting platform",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "\\.vercel\\.app$",
+        "alias\\.zeit\\.co$"
+      ],
+      "website": "https://vercel.com"
+    },
+    {
+      "name": "DNSSEC",
+      "category": "DNS Security",
+      "description": "DNS Security Extensions for authenticated DNS responses",
+      "recordTypes": ["DNSKEY", "DS", "RRSIG", "NSEC", "NSEC3", "NSEC3PARAM"],
+      "patterns": [
+        ".*"
+      ],
+      "website": "https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en"
+    },
+    {
+      "name": "Let's Encrypt",
+      "category": "SSL Certificate",
+      "description": "Free SSL certificate provider",
+      "recordTypes": ["TXT", "CAA"],
+      "patterns": [
+        "_acme-challenge\\..*",
+        "letsencrypt\\.org"
+      ],
+      "website": "https://letsencrypt.org"
+    },
+    {
+      "name": "Sectigo",
+      "category": "SSL Certificate",
+      "description": "Sectigo (formerly Comodo) SSL certificate provider",
+      "recordTypes": ["CAA"],
+      "patterns": [
+        "sectigo\\.com",
+        "comodoca\\.com"
+      ],
+      "website": "https://sectigo.com"
+    },
+    {
+      "name": "DigiCert",
+      "category": "SSL Certificate",
+      "description": "DigiCert SSL certificate provider",
+      "recordTypes": ["CAA"],
+      "patterns": [
+        "digicert\\.com"
+      ],
+      "website": "https://www.digicert.com"
+    },
+    {
+      "name": "IPv6 Enabled",
+      "category": "Network Configuration",
+      "description": "Domain has IPv6 connectivity configured",
+      "recordTypes": ["AAAA"],
+      "patterns": [
+        ".*"
+      ],
+      "website": "https://www.internetsociety.org/deploy360/ipv6/"
+    },
+    {
+      "name": "SRV Services",
+      "category": "Service Discovery",
+      "description": "Service records indicate specific protocols/services",
+      "recordTypes": ["SRV"],
+      "patterns": [
+        ".*"
+      ],
+      "website": "https://en.wikipedia.org/wiki/SRV_record"
+    },
+    {
+      "name": "DMARC Policy",
+      "category": "Email Security",
+      "description": "Domain-based Message Authentication, Reporting & Conformance policy",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=DMARC1;\\s*p=(none|quarantine|reject)"
+      ],
+      "website": "https://dmarc.org/"
+    },
+    {
+      "name": "BIMI",
+      "category": "Email Security",
+      "description": "Brand Indicators for Message Identification",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=BIMI1.*"
+      ],
+      "website": "https://bimigroup.org/"
+    },
+    {
+      "name": "Microsoft Exchange Online Protection",
+      "category": "Email Security",
+      "description": "Microsoft Exchange Online email filtering service",
+      "recordTypes": ["MX"],
+      "patterns": [
+        ".*mail\\.protection\\.outlook\\.com"
+      ],
+      "website": "https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/eop/exchange-online-protection-overview"
+    },
+    {
+      "name": "ProtonMail",
+      "category": "Email & Collaboration",
+      "description": "ProtonMail encrypted email service",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mail\\.protonmail\\.ch",
+        "mailsec\\.protonmail\\.ch",
+        "protonmail\\.ch",
+        "protonmail-verification=.*"
+      ],
+      "website": "https://proton.me/mail"
+    },
+    {
+      "name": "Fastmail",
+      "category": "Email & Collaboration",
+      "description": "Fastmail email provider",
+      "recordTypes": ["MX"],
+      "patterns": [
+        "in[0-9]+\\.messagingengine\\.com",
+        "in\\.fastmail\\.com"
+      ],
+      "website": "https://www.fastmail.com"
+    },
+    {
+      "name": "Zoho Mail",
+      "category": "Email & Collaboration",
+      "description": "Zoho Mail email service",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mx\\.zoho\\.com",
+        "zoho-verification=.*"
+      ],
+      "website": "https://www.zoho.com/mail/"
+    },
+    {
+      "name": "Akamai",
+      "category": "CDN & Security",
+      "description": "Akamai content delivery network and security services",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "\\.akam\\.net$",
+        "\\.akamai\\.net$",
+        "\\.akamaiedge\\.net$"
+      ],
+      "website": "https://www.akamai.com"
+    },
+    {
+      "name": "Route53",
+      "category": "DNS Hosting",
+      "description": "Amazon Route 53 DNS service",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "ns-[0-9]+\\.awsdns-[0-9]+\\.[a-z]+\\."
+      ],
+      "website": "https://aws.amazon.com/route53/"
+    },
+    {
+      "name": "Azure DNS",
+      "category": "DNS Hosting",
+      "description": "Microsoft Azure DNS service",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "ns[0-9]+\\-[0-9]+\\.azure\\-dns\\.[a-z]+\\."
+      ],
+      "website": "https://azure.microsoft.com/en-us/services/dns/"
+    },
+    {
+      "name": "GoDaddy DNS",
+      "category": "DNS Hosting",
+      "description": "GoDaddy DNS hosting",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "ns[0-9]+\\.domaincontrol\\.com"
+      ],
+      "website": "https://www.godaddy.com"
+    },
+    {
+      "name": "Namecheap DNS",
+      "category": "DNS Hosting",
+      "description": "Namecheap DNS hosting",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "dns[0-9]+\\.registrar-servers\\.com"
+      ],
+      "website": "https://www.namecheap.com"
+    },
+    {
+      "name": "Google Domains",
+      "category": "DNS Hosting",
+      "description": "Google Domains DNS hosting",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "ns-cloud-[a-z][0-9]+\\.googledomains\\.com"
+      ],
+      "website": "https://domains.google/"
+    },
+    {
+      "name": "Cloudflare Pages",
+      "category": "Web Hosting",
+      "description": "Cloudflare Pages static site hosting",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "pages\\.dev$",
+        "workers\\.dev$"
+      ],
+      "website": "https://pages.cloudflare.com/"
+    },
+    {
+      "name": "Firebase",
+      "category": "Cloud Services",
+      "description": "Google Firebase platform",
+      "recordTypes": ["CNAME", "A", "TXT"],
+      "patterns": [
+        "firebaseapp\\.com$",
+        "web\\.app$",
+        "firebase=.*"
+      ],
+      "website": "https://firebase.google.com/"
+    },
+    {
+      "name": "Google Cloud",
+      "category": "Cloud Services",
+      "description": "Google Cloud Platform",
+      "recordTypes": ["CNAME", "A"],
+      "patterns": [
+        "\\.appspot\\.com$",
+        "\\.cloudfunctions\\.net$",
+        "\\.run\\.app$"
+      ],
+      "website": "https://cloud.google.com"
+    },
+    {
+      "name": "Azure",
+      "category": "Cloud Services",
+      "description": "Microsoft Azure cloud platform",
+      "recordTypes": ["CNAME", "TXT", "NS"],
+      "patterns": [
+        "\\.azurewebsites\\.net$",
+        "\\.azure-dns\\.com$",
+        "\\.azure-dns\\.net$",
+        "\\.azure-dns\\.org$",
+        "\\.azure-dns\\.info$"
+      ],
+      "website": "https://azure.microsoft.com"
+    }
+  ]
+}
