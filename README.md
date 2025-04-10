@@ -26,6 +26,11 @@ RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS r
 
 ## Installation
 
+Run the following command to install the latest version:
+```bash
+go install -v github.com/Elite-Security-Systems/radar/cmd/radar@latest
+```
+
 ### Using Prebuilt Binaries
 
 Download the latest release for your platform from the [releases page](https://github.com/Elite-Security-Systems/radar/releases).
