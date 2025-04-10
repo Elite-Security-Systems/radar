@@ -102,7 +102,7 @@ func TestDetectTechnologies(t *testing.T) {
 					},
 				},
 			},
-			expected: []models.DetectedTechnology{},
+			expected: make([]models.DetectedTechnology, 0),
 		},
 		{
 			name: "Multiple matches, deduplicate",
