@@ -1,25 +1,106 @@
 {
   "signatures": [
-	{
-	  "name": "SafeSigned",
-	  "category": "Email Security",
-	  "description": "SafeSigned email security and signature service",
-	  "recordTypes": ["TXT"],
-	  "patterns": [
+    {
+      "name": "Zoom",
+      "category": "Communication",
+      "description": "Zoom video conferencing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "ZOOM_verify_.*"
+      ],
+      "website": "https://zoom.us"
+    },
+    {
+      "name": "Brevo",
+      "category": "Email Marketing",
+      "description": "Brevo (formerly Sendinblue) email marketing and CRM platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "brevo-code:.*",
+        "include:spf\\.brevo\\.com"
+      ],
+      "website": "https://www.brevo.com"
+    },
+    {
+      "name": "Canva",
+      "category": "Design",
+      "description": "Canva online design and publishing tool",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "canva-site-verification=.*"
+      ],
+      "website": "https://www.canva.com"
+    },
+    {
+      "name": "Palo Alto Networks",
+      "category": "Security",
+      "description": "Palo Alto Networks security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "paloaltonetworks-site-verification=.*"
+      ],
+      "website": "https://www.paloaltonetworks.com"
+    },
+    {
+      "name": "Reachdesk",
+      "category": "Marketing",
+      "description": "Reachdesk gifting platform for B2B marketing",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "reachdesk-verification=.*"
+      ],
+      "website": "https://www.reachdesk.com"
+    },
+    {
+      "name": "Wiz",
+      "category": "Cloud Security",
+      "description": "Wiz cloud security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "wiz-domain-verification=.*"
+      ],
+      "website": "https://www.wiz.io"
+    },
+    {
+      "name": "Slack",
+      "category": "Communication",
+      "description": "Slack team collaboration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "slack-domain-verification=.*"
+      ],
+      "website": "https://slack.com"
+    },
+    {
+      "name": "Docebo",
+      "category": "Learning Management",
+      "description": "Docebo learning management system (LMS)",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:docebosaas\\.com"
+      ],
+      "website": "https://www.docebo.com"
+    },
+    {
+      "name": "SafeSigned",
+      "category": "Email Security",
+      "description": "SafeSigned email security and signature service",
+      "recordTypes": ["TXT"],
+      "patterns": [
 		"include:safesigned\\.com"
-	  ],
-	  "website": "https://safesigned.com"
-	},
-	{
-	  "name": "NSEC3 DNSSEC",
-	  "category": "DNS Security",
-	  "description": "DNSSEC with NSEC3 (hashed) authenticated denial of existence",
-	  "recordTypes": ["NSEC3PARAM"],
-	  "patterns": [
+      ],
+      "website": "https://safesigned.com"
+    },
+    {
+      "name": "NSEC3 DNSSEC",
+      "category": "DNS Security",
+      "description": "DNSSEC with NSEC3 (hashed) authenticated denial of existence",
+      "recordTypes": ["NSEC3PARAM"],
+      "patterns": [
 		".*NSEC3PARAM.*"
-	  ],
-	  "website": "https://www.cloudflare.com/dns/dnssec/how-dnssec-works/"
-	},
+      ],
+      "website": "https://www.cloudflare.com/dns/dnssec/how-dnssec-works/"
+    },
     {
       "name": "Pardot Sending Domain",
       "category": "Marketing Automation",
