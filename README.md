@@ -43,19 +43,19 @@ go install ./cmd/radar
 To scan a domain:
 
 ```bash
-docker run elitesecuritysystems/radar -domain example.com
+docker run -it elitesecuritysystems/radar -domain example.com
 ```
 
 To include all DNS records in the output:
 
 ```bash
-docker run elitesecuritysystems/radar -domain example.com -all-records
+docker run -it elitesecuritysystems/radar -domain example.com -all-records
 ```
 
 To force signature updates:
 
 ```bash
-docker run elitesecuritysystems/radar -update-signatures
+docker run -it elitesecuritysystems/radar -update-signatures
 ```
 
 ## Quick Start
