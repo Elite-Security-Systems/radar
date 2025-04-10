@@ -1,7 +1,7 @@
 # RADAR: Recognition and DNS Analysis for Resource detection
 
 <p align="center">
-  <img src="static/radar-logo.png" alt="RADAR Logo" width="200"/>
+  <img src="static/radar-logo.png" alt="RADAR Logo"/>
 </p>
 
 <p align="center">
