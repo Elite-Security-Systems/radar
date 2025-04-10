@@ -819,7 +819,8 @@
       "description": "Amazon Simple Email Service",
       "recordTypes": ["TXT"],
       "patterns": [
-        "include:amazonses\\.com"
+        "include:amazonses\\.com",
+        "inbound-smtp\\.[a-z0-9-]+\\.amazonaws\\.com"
       ],
       "website": "https://aws.amazon.com/ses/"
     },
@@ -1096,17 +1097,6 @@
       "website": "https://www.godaddy.com/web-security/ssl-certificate"
     },
     {
-      "name": "Microsoft 365",
-      "category": "Email & Collaboration",
-      "description": "Microsoft 365 (formerly Office 365) email services",
-      "recordTypes": ["MX", "TXT"],
-      "patterns": [
-        ".*\\.mail\\.protection\\.outlook\\.com\\.$",
-        "include:spf\\.protection\\.outlook\\.com"
-      ],
-      "website": "https://www.microsoft.com/en-us/microsoft-365"
-    },
-    {
       "name": "DKIM",
       "category": "Email Security",
       "description": "DomainKeys Identified Mail for email authentication",
@@ -1218,7 +1208,8 @@
         "outlook\\.com$",
         "protection\\.outlook\\.com$",
         "ms=ms\\d+",
-        "MS=ms\\d+"
+        "MS=ms\\d+",
+        "MS=[A-F0-9]{40}"
       ],
       "website": "https://www.microsoft.com/en-us/microsoft-365"
     },
