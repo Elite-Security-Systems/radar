@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "Proofpoint",
+      "category": "Email Security",
+      "description": "Proofpoint email protection and security platform",
+      "recordTypes": ["MX"],
+      "patterns": [
+        "\\.pphosted\\.com\\.$"
+      ],
+      "website": "https://www.proofpoint.com"
+    },
+    {
       "name": "Yardi",
       "category": "Real Estate Management",
       "description": "Yardi property and real estate management software",
@@ -209,7 +219,9 @@
       "recordTypes": ["TXT"],
       "patterns": [
         "exists:%\\{i\\}\\._i\\.%\\{d\\}\\._d\\.espf\\.agari\\.com",
-        "include:%\\{d\\}\\.[0-9]+\\.spf-protect\\.agari\\.com"
+        "include:%\\{d\\}\\.[0-9]+\\.spf-protect\\.agari\\.com",
+		"exists:%\\{i\\}\\._i\\.%\\{d\\}\\._d\\.espf\\.agari-dns\\.net",
+		"include:%\\{d\\}\\.[0-9]+\\.spf-protect\\.agari-dns\\.net"
       ],
       "website": "https://www.agari.com"
     },
