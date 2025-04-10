@@ -4,13 +4,6 @@
   <img src="static/radar-logo.png" alt="RADAR Logo"/>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Elite-Security-Systems/radar/releases"><img src="https://img.shields.io/github/v/release/Elite-Security-Systems/radar" alt="Latest Release"></a>
-  <a href="https://github.com/Elite-Security-Systems/radar/actions"><img src="https://github.com/Elite-Security-Systems/radar/workflows/Build/badge.svg" alt="Build Status"></a>
-  <a href="https://goreportcard.com/report/github.com/Elite-Security-Systems/radar"><img src="https://goreportcard.com/badge/github.com/Elite-Security-Systems/radar" alt="Go Report Card"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Elite-Security-Systems/radar" alt="License"></a>
-</p>
-
 ## About RADAR
 
 RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS reconnaissance tool designed to identify technologies and services used by domains through their DNS footprints. Developed by [Elite Security Systems](https://elitesecurity.systems), RADAR can detect hundreds of technologies including cloud services, email providers, CDNs, security services, and more.
@@ -30,10 +23,6 @@ Run the following command to install the latest version:
 ```bash
 go install -v github.com/Elite-Security-Systems/radar/cmd/radar@latest
 ```
-
-### Using Prebuilt Binaries
-
-Download the latest release for your platform from the [releases page](https://github.com/Elite-Security-Systems/radar/releases).
 
 ### From Source
 
