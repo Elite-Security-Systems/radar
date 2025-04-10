@@ -1,6 +1,118 @@
 {
   "signatures": [
     {
+      "name": "Airtable",
+      "category": "Productivity",
+      "description": "Airtable cloud collaboration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "airtable-verification=.*"
+      ],
+      "website": "https://airtable.com"
+    },
+    {
+      "name": "Adobe Sign",
+      "category": "Document Management",
+      "description": "Adobe Sign electronic signature service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "adobe-sign-verification=.*"
+      ],
+      "website": "https://acrobat.adobe.com/us/en/sign.html"
+    },
+    {
+      "name": "Neat",
+      "category": "Finance",
+      "description": "Neat expense management and bookkeeping solution",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "neat-pulse-domain-verification.*"
+      ],
+      "website": "https://www.neat.com"
+    },
+    {
+      "name": "Fastly",
+      "category": "CDN",
+      "description": "Fastly content delivery network",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "fastly-domain-(delegation|verify).*",
+        "Fastly-Domain-Verify.*"
+      ],
+      "website": "https://www.fastly.com"
+    },
+    {
+      "name": "ElevenLabs",
+      "category": "AI & Speech",
+      "description": "ElevenLabs AI voice technology platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "elevenlabs=.*"
+      ],
+      "website": "https://elevenlabs.io"
+    },
+    {
+      "name": "Zapier",
+      "category": "Automation",
+      "description": "Zapier workflow automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "zapier-domain-verification.*"
+      ],
+      "website": "https://zapier.com"
+    },
+    {
+      "name": "GitHub",
+      "category": "Development",
+      "description": "GitHub code hosting platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "_github-challenge.*"
+      ],
+      "website": "https://github.com"
+    },
+    {
+      "name": "Postman",
+      "category": "Development",
+      "description": "Postman API platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "postman-domain-verification=.*"
+      ],
+      "website": "https://www.postman.com"
+    },
+    {
+      "name": "Agari",
+      "category": "Email Security",
+      "description": "Agari email security and anti-phishing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "exists:%\\{i\\}\\._i\\.%\\{d\\}\\._d\\.espf\\.agari\\.com",
+        "include:%\\{d\\}\\.[0-9]+\\.spf-protect\\.agari\\.com"
+      ],
+      "website": "https://www.agari.com"
+    },
+    {
+      "name": "Akamai",
+      "category": "CDN & Security",
+      "description": "Akamai content delivery network and security services",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "a[0-9]+-[0-9]+\\.akam\\.net\\."
+      ],
+      "website": "https://www.akamai.com"
+    },
+    {
+      "name": "Site24x7",
+      "category": "Monitoring",
+      "description": "Site24x7 website and application monitoring service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "site24x7-signals-domain-verification=.*"
+      ],
+      "website": "https://www.site24x7.com"
+    },
+    {
       "name": "ConfigCat",
       "category": "Development",
       "description": "ConfigCat feature flag and configuration management service",
