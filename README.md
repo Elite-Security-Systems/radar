@@ -1,3 +1,5 @@
+# RADAR: Recognition and DNS Analysis for Resource detection
+
 <p align="center">
   <img src="static/radar-logo.png" alt="RADAR Logo"/>
 </p>
@@ -9,17 +11,9 @@
 <a href="https://twitter.com/eliteSsystems"><img src="https://img.shields.io/twitter/follow/eliteSsystems.svg?logo=twitter"></a>
 </p>
 
-## About
+## About RADAR
 
-RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS reconnaissance tool designed to identify technologies and services used by domains through their DNS footprints. 
-
-Developed by [Elite Security Systems](https://elitesecurity.systems), RADAR can detect hundreds of technologies including cloud services, email providers, CDNs, security services, and more.
-
-## In action
-
-<p align="center">
-  <img src="static/terminal.png" alt="RADAR Terminal">
-</p>
+RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS reconnaissance tool designed to identify technologies and services used by domains through their DNS footprints. Developed by [Elite Security Systems](https://elitesecurity.systems), RADAR can detect hundreds of technologies including cloud services, email providers, CDNs, security services, and more.
 
 ## Features
 
@@ -30,6 +24,7 @@ Developed by [Elite Security Systems](https://elitesecurity.systems), RADAR can 
 - 📊 **Detailed Reporting**: Produces structured JSON output for easy integration with other tools
 - 🌐 **Robust Resolving**: Leverages both system DNS resolver and public DNS services for maximum coverage
 - 🧠 **Auto-Updates**: Automatically downloads the latest signatures from GitHub
+- 📋 **Batch Scanning**: Process multiple domains from a list with a single command
 
 ## Installation
 
@@ -73,6 +68,9 @@ radar -domain example.com
 # Scan with all DNS records in output
 radar -domain example.com -all-records
 
+# Scan multiple domains from a file
+radar -l domains.txt
+
 # Use custom signatures file
 radar -domain example.com -signatures /path/to/signatures.json
 
@@ -85,47 +83,120 @@ radar -domain example.com -timeout 30
 
 ## Output Options
 
-### JSON Output Format
+### Clean JSON Output
 
-By default, RADAR outputs results to stdout in JSON format:
+By default, RADAR provides clean JSON output with no progress indicators or separators, making it ideal for piping to other tools:
 
-```json
-{
-  "domain": "example.com",
-  "detectedTechnologies": [
-    {
-      "name": "Cloudflare",
-      "category": "CDN & Security",
-      "description": "Cloudflare CDN and security services",
-      "website": "https://www.cloudflare.com",
-      "evidence": "ns1.cloudflare.com.",
-      "recordType": "NS"
-    },
-    ...
-  ]
-}
+```bash
+# Basic usage
+radar -domain example.com > result.json
+
+# Multiple domains
+radar -l domains.txt > all-results.json
 ```
 
-### Save Results to File
+When processing multiple domains, each domain's result will be output as a complete JSON object, one after another.
 
-You can save results to a file using the `-o` flag:
+### Verbose Output Mode
+
+If you prefer to see progress information when processing multiple domains, use the `-verbose` flag:
+
+```bash
+radar -l domains.txt -verbose
+```
+
+This will display progress information on stderr while keeping the stdout output clean:
+
+```
+Processing domain 1/3: example.com
+Processing domain 2/3: example.org
+Processing domain 3/3: example.net
+```
+
+The JSON output will still be sent to stdout, making it easy to redirect while still seeing progress:
+
+```bash
+radar -l domains.txt -verbose > results.json
+```
+
+### Saving Results to Files
+
+You can save results directly to files using the `-o` flag:
 
 ```bash
 # Save to a specific file
 radar -domain example.com -o results.json
 
-# Save to a directory (creates a timestamped file)
-radar -domain example.com -o /path/to/output/
+# Save to a directory (creates timestamped files for each domain)
+radar -l domains.txt -o ./results/
 ```
 
-When you specify a directory, RADAR will create a file with a format like: 
+With the `-verbose` flag, you'll see information about where files are saved:
+
+```bash
+radar -l domains.txt -o ./results/ -verbose
+Processing domain 1/3: example.com
+Results for example.com saved to: ./results/example.com_20250410-150405.json
+Processing domain 2/3: example.org
+Results for example.org saved to: ./results/example.org_20250410-150406.json
+...
 ```
-/path/to/output/example.com_20250410-150405.json
+
+### Target List Functionality
+
+RADAR supports scanning multiple domains using a target list file with the `-l` flag:
+
+```bash
+# Scan multiple domains from a file
+radar -l domains.txt
+```
+
+Where `domains.txt` contains one domain per line:
+```
+example.com
+example.org
+example.net
+```
+
+#### Output Options with Target Lists
+
+When using a target list, RADAR provides flexible output options:
+
+**Standard Output (No `-o` flag)**
+Results for each domain are printed to stdout sequentially as clean JSON.
+
+**Directory Output (Directory Path)**
+```bash
+radar -l domains.txt -o results/
+```
+Creates separate files for each domain.
+
+**Combined Output (Specific File Path)**
+```bash
+radar -l domains.txt -o combined-results.json
+```
+Saves all results to a single combined JSON file.
+
+#### Target List Format
+
+- One domain per line
+- Empty lines are ignored
+- Lines starting with `#` are treated as comments
+
+Example:
+```
+# Production domains
+example.com
+example.org
+
+# Development domains
+dev.example.com
+staging.example.com
 ```
 
 ### Silent Mode
 
-Use the `-silent` flag to suppress all non-error output:
+Use the `-silent` flag to suppress all output except error messages:
 
 ```bash
 # Silent mode with output to a file
@@ -137,7 +208,7 @@ radar -domain example.com -o results.json -silent
 This is particularly useful for:
 - Scheduled tasks and cron jobs
 - CI/CD pipelines
-- Batch processing where you want to avoid cluttering logs
+- Batch processing where you want to avoid any output
 
 ## Advanced Usage
 
@@ -178,6 +249,12 @@ done < domains.txt
 echo "All scans complete. Results saved in $OUTPUT_DIR directory."
 ```
 
+For more advanced batch processing, use the built-in target list functionality:
+
+```bash
+radar -l domains.txt -o combined-results.json -verbose
+```
+
 ## Docker Usage
 
 ### Basic Usage
@@ -186,16 +263,32 @@ echo "All scans complete. Results saved in $OUTPUT_DIR directory."
 docker run elitesecuritysystems/radar -domain example.com
 ```
 
+### With Target List
+
+```bash
+docker run -v "$(pwd)/domains.txt:/domains.txt" \
+  elitesecuritysystems/radar -l /domains.txt
+```
+
 ### Save Results to Host Machine
 
 ```bash
-docker run -v "$(pwd)/output:/output" elitesecuritysystems/radar -domain example.com -o /output
+docker run -v "$(pwd)/output:/output" -v "$(pwd)/domains.txt:/domains.txt" \
+  elitesecuritysystems/radar -l /domains.txt -o /output
+```
+
+### Verbose Mode with Docker
+
+```bash
+docker run -v "$(pwd)/domains.txt:/domains.txt" \
+  elitesecuritysystems/radar -l /domains.txt -verbose
 ```
 
 ### Silent Mode with Docker
 
 ```bash
-docker run -v "$(pwd)/output:/output" elitesecuritysystems/radar -domain example.com -o /output -silent
+docker run -v "$(pwd)/output:/output" \
+  elitesecuritysystems/radar -domain example.com -o /output -silent
 ```
 
 ### Force Update Signatures
@@ -209,6 +302,7 @@ docker run elitesecuritysystems/radar -update-signatures
 | Flag | Description |
 |------|-------------|
 | `-domain` | Domain name to analyze |
+| `-l` | File containing list of domains to analyze (one per line) |
 | `-o` | Output file path or directory for results |
 | `-all-records` | Include all records in JSON output |
 | `-timeout` | Query timeout in seconds (default: 15) |
@@ -216,7 +310,8 @@ docker run elitesecuritysystems/radar -update-signatures
 | `-max-records` | Maximum number of records to collect (default: 1000) |
 | `-signatures` | Path to signatures file (default: data/signatures.json) |
 | `-update-signatures` | Force update signatures from GitHub |
-| `-silent` | Silent mode - suppress all non-error output |
+| `-silent` | Silent mode - suppress all output |
+| `-verbose` | Show progress information on stderr while keeping clean JSON on stdout |
 | `-version` | Show version information |
 
 ## Custom Signatures
@@ -276,6 +371,7 @@ If you encounter issues:
 2. Ensure your tool/container has network access
 3. Check if the signature update is working by running with `-update-signatures`
 4. Make sure mounted volumes have correct permissions when using Docker
+5. For target list issues, verify the file format and permissions
 
 For more help, please open an issue on GitHub.
 
