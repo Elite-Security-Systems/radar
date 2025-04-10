@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "Coda",
+      "category": "Productivity",
+      "description": "Coda document collaboration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "coda-verification=.*"
+      ],
+      "website": "https://coda.io"
+    },
+    {
       "name": "Jamf",
       "category": "Mobile Device Management",
       "description": "Jamf Apple device management platform",
