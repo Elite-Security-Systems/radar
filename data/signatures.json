@@ -1,6 +1,98 @@
 {
   "signatures": [
     {
+      "name": "1Password",
+      "category": "Security",
+      "description": "1Password password management and secure storage",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "1password-site-verification=.*"
+      ],
+      "website": "https://1password.com"
+    },
+    {
+      "name": "Dynatrace",
+      "category": "Monitoring",
+      "description": "Dynatrace application performance monitoring and observability",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "Dynatrace-site-verification=.*"
+      ],
+      "website": "https://www.dynatrace.com"
+    },
+    {
+      "name": "Mandrill",
+      "category": "Email Delivery",
+      "description": "Mailchimp's Mandrill transactional email service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.mandrillapp\\.com"
+      ],
+      "website": "https://mailchimp.com/features/transactional-email/"
+    },
+    {
+      "name": "Oderland",
+      "category": "Web Hosting",
+      "description": "Oderland Swedish web hosting provider",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_vsp\\.oderland\\.com"
+      ],
+      "website": "https://www.oderland.se"
+    },
+    {
+      "name": "Sage Intacct",
+      "category": "Finance & Accounting",
+      "description": "Sage Intacct cloud financial management and accounting software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.intacct\\.com",
+        "intacct-esk=.*"
+      ],
+      "website": "https://www.sageintacct.com"
+    },
+    {
+      "name": "Citrix",
+      "category": "Virtualization & Remote Access",
+      "description": "Citrix virtualization and remote work solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "citrix-verification-code=.*"
+      ],
+      "website": "https://www.citrix.com"
+    },
+    {
+      "name": "Segment",
+      "category": "Analytics",
+      "description": "Segment customer data platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "segment-site-verification=.*"
+      ],
+      "website": "https://segment.com"
+    },
+    {
+      "name": "Mimecast",
+      "category": "Email Security",
+      "description": "Mimecast email security and management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "_netblocks\\.mimecast\\.com",
+        "include:.*\\._spf\\._d\\.mim\\.ec"
+      ],
+      "website": "https://www.mimecast.com"
+    },
+    {
+      "name": "Mixpanel",
+      "category": "Analytics",
+      "description": "Mixpanel product analytics platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mixpanel-domain-verify=.*"
+      ],
+      "website": "https://mixpanel.com"
+    },
+    {
       "name": "JetBrains",
       "category": "Development Tools",
       "description": "JetBrains development tools and IDEs",
