@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "HackerOne",
+      "category": "Security",
+      "description": "HackerOne bug bounty and vulnerability coordination platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "h1-domain-verification=.*"
+      ],
+      "website": "https://www.hackerone.com"
+    },
+    {
       "name": "Zoom",
       "category": "Communication",
       "description": "Zoom video conferencing platform",
