@@ -13,7 +13,7 @@ import (
 
 var (
 	// Version information - to be set during build
-	Version   = "dev"
+	Version   = "0.1.1"
 	BuildDate = "unknown"
 	Commit    = "none"
 )
@@ -28,6 +28,7 @@ func main() {
 		debugMode         bool
 		maxRecords        int
 		showVersion       bool
+		forceUpdate       bool
 	)
 
 	flag.StringVar(&domainName, "domain", "", "Domain name to analyze")
@@ -37,6 +38,7 @@ func main() {
 	flag.BoolVar(&debugMode, "debug", false, "Enable debug output")
 	flag.IntVar(&maxRecords, "max-records", 1000, "Maximum number of records to collect (prevents hangs)")
 	flag.BoolVar(&showVersion, "version", false, "Show version information")
+	flag.BoolVar(&forceUpdate, "update-signatures", false, "Force update signatures from GitHub")
 	flag.Parse()
 
 	// Show version information if requested
@@ -47,6 +49,22 @@ func main() {
 		fmt.Printf("Commit: %s\n", Commit)
 		fmt.Printf("Developed by Elite Security Systems (elitesecurity.systems)\n")
 		os.Exit(0)
+	}
+
+	// Force update signatures if requested
+	if forceUpdate {
+		fmt.Println("Updating signatures from GitHub repository...")
+		err := signatures.DownloadSignatures(signatures.DefaultSignaturesURL, signatures.DefaultCachePath)
+		if err != nil {
+			fmt.Printf("Error updating signatures: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Printf("Signatures updated successfully to %s\n", signatures.DefaultCachePath)
+		
+		// If no domain provided, exit after update
+		if domainName == "" {
+			os.Exit(0)
+		}
 	}
 
 	// Validate domain name
