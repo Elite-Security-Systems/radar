@@ -177,18 +177,6 @@
       "website": "https://www.tripwire.com"
     },
     {
-      "name": "Symantec Email Security",
-      "category": "Email Security",
-      "description": "Symantec/Broadcom email security service",
-      "recordTypes": ["MX", "TXT"],
-      "patterns": [
-        "mx[0-9]+\\.messagelabs\\.com$",
-        "include:spf\\.messagelabs\\.com",
-        "include:spf\\.protection\\.outlook\\.com"
-      ],
-      "website": "https://www.broadcom.com/products/cyber-security/email"
-    },
-    {
       "name": "FIDO Security Keys",
       "category": "Authentication",
       "description": "FIDO Alliance WebAuthn key configuration",
