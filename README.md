@@ -2,6 +2,13 @@
   <img src="static/radar-logo.png" alt="RADAR Logo"/>
 </p>
 
+<p align="center">
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-_red.svg"></a>
+<a href="https://goreportcard.com/badge/github.com/Elite-Security-Systems/radar"><img src="https://goreportcard.com/badge/github.com/Elite-Security-Systems/radar"></a>
+<a href="https://hub.docker.com/r/Elite-Security-Systems/radar"><img src="https://img.shields.io/docker/pulls/Elite-Security-Systems/radar.svg"></a>
+<a href="https://twitter.com/eliteSsystems"><img src="https://img.shields.io/twitter/follow/eliteSsystems.svg?logo=twitter"></a>
+</p>
+
 ## About
 
 RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS reconnaissance tool designed to identify technologies and services used by domains through their DNS footprints. 
