@@ -1,6 +1,97 @@
 {
   "signatures": [
     {
+      "name": "Facebook Workplace",
+      "category": "Communication",
+      "description": "Facebook Workplace enterprise collaboration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "workplace-domain-verification=.*"
+      ],
+      "website": "https://www.workplace.com"
+    },
+    {
+      "name": "Yandex Verification",
+      "category": "Domain Verification",
+      "description": "Yandex search engine domain verification",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "yandex-verification:.*"
+      ],
+      "website": "https://yandex.com"
+    },
+    {
+      "name": "GlobalSign",
+      "category": "SSL Certificate",
+      "description": "GlobalSign SSL certificate provider",
+      "recordTypes": ["TXT", "CAA"],
+      "patterns": [
+        "globalsign-domain-verification=.*",
+        "0 issue \"globalsign\\.com\""
+      ],
+      "website": "https://www.globalsign.com"
+    },
+    {
+      "name": "DataDome",
+      "category": "Security",
+      "description": "DataDome bot protection and anti-fraud solution",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "datadome-domain-verify=.*"
+      ],
+      "website": "https://datadome.co"
+    },
+    {
+      "name": "Schneider EcoStruxure",
+      "category": "Industrial",
+      "description": "Schneider Electric EcoStruxure IoT platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "ecostruxure-it-verification=.*"
+      ],
+      "website": "https://www.se.com/ww/en/work/solutions/system/s1/ecostruxure"
+    },
+    {
+      "name": "Cisco Intersight",
+      "category": "Cloud Management",
+      "description": "Cisco Intersight cloud operations platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "intersight=.*"
+      ],
+      "website": "https://www.cisco.com/c/en/us/products/servers-unified-computing/intersight/index.html"
+    },
+    {
+      "name": "Notion",
+      "category": "Productivity",
+      "description": "Notion all-in-one workspace",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "Notion_verify_.*"
+      ],
+      "website": "https://www.notion.so"
+    },
+    {
+      "name": "SendGrid",
+      "category": "Email Delivery",
+      "description": "SendGrid email delivery service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:sendgrid\\.net"
+      ],
+      "website": "https://sendgrid.com"
+    },
+    {
+      "name": "Pardot SPF",
+      "category": "Marketing Automation",
+      "description": "Salesforce Pardot SPF records for email sending",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:aspmx\\.pardot\\.com"
+      ],
+      "website": "https://www.pardot.com"
+    },
+    {
       "name": "HackerOne",
       "category": "Security",
       "description": "HackerOne bug bounty and vulnerability coordination platform",
