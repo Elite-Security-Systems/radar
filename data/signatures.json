@@ -3428,16 +3428,6 @@
       "website": "https://www.internetsociety.org/deploy360/ipv6/"
     },
     {
-      "name": "SRV Services",
-      "category": "Service Discovery",
-      "description": "Service records indicate specific protocols/services",
-      "recordTypes": ["SRV"],
-      "patterns": [
-        ".*"
-      ],
-      "website": "https://en.wikipedia.org/wiki/SRV_record"
-    },
-    {
       "name": "DMARC Policy",
       "category": "Email Security",
       "description": "Domain-based Message Authentication, Reporting & Conformance policy",
