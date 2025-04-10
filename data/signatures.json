@@ -1,6 +1,1908 @@
 {
   "signatures": [
     {
+      "name": "Palo Alto Cortex XDR",
+      "category": "Security",
+      "description": "Palo Alto Networks Cortex XDR platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cortex-xdr-verification=.*"
+      ],
+      "website": "https://www.paloaltonetworks.com/cortex/cortex-xdr"
+    },
+    {
+      "name": "Microsoft Defender XDR",
+      "category": "Security",
+      "description": "Microsoft Defender XDR platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "msft-defender-xdr-verification=.*"
+      ],
+      "website": "https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-xdr"
+    },
+    {
+      "name": "Vanta",
+      "category": "Security",
+      "description": "Vanta automated security compliance platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "vanta-domain-verification=.*"
+      ],
+      "website": "https://www.vanta.com"
+    },
+    {
+      "name": "Drata",
+      "category": "Security",
+      "description": "Drata security compliance automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "drata-domain-verification=.*"
+      ],
+      "website": "https://drata.com"
+    },
+    {
+      "name": "SPF with PTR Mechanism",
+      "category": "Security",
+      "description": "SPF record using PTR mechanism (considered less secure)",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=spf1 .*ptr:.*"
+      ],
+      "website": "https://datatracker.ietf.org/doc/html/rfc7208"
+    },
+    {
+      "name": "SecurityScorecard",
+      "category": "Security",
+      "description": "SecurityScorecard security rating and monitoring platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "securityscorecard-verification=.*"
+      ],
+      "website": "https://securityscorecard.com"
+    },
+    {
+      "name": "Darktrace",
+      "category": "Security",
+      "description": "Darktrace AI-powered security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "darktrace-verification=.*"
+      ],
+      "website": "https://www.darktrace.com"
+    },
+    {
+      "name": "SentinelOne",
+      "category": "Security",
+      "description": "SentinelOne autonomous cybersecurity platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "sentinelone-verification=.*"
+      ],
+      "website": "https://www.sentinelone.com"
+    },
+    {
+      "name": "Qualys",
+      "category": "Security",
+      "description": "Qualys cloud security and compliance platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "qualys-verification=.*",
+        "qualys-site-verification=.*"
+      ],
+      "website": "https://www.qualys.com"
+    },
+    {
+      "name": "Splunk",
+      "category": "Security",
+      "description": "Splunk data platform for security and observability",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "splunk-domain-verification=.*"
+      ],
+      "website": "https://www.splunk.com"
+    },
+    {
+      "name": "Cisco Umbrella",
+      "category": "Security",
+      "description": "Cisco Umbrella cloud security service",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.umbrella\\.com$"
+      ],
+      "website": "https://umbrella.cisco.com"
+    },
+    {
+      "name": "ThreatConnect",
+      "category": "Security",
+      "description": "ThreatConnect security operations and threat intelligence platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "threatconnect-verification=.*"
+      ],
+      "website": "https://threatconnect.com"
+    },
+    {
+      "name": "ZScaler",
+      "category": "Security",
+      "description": "ZScaler cloud security platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.zscaler\\.net$",
+        "\\.zscalertwo\\.net$",
+        "\\.zscalerthree\\.net$",
+        "zscaler-domain-verification=.*"
+      ],
+      "website": "https://www.zscaler.com"
+    },
+    {
+      "name": "Cisco Secure Email",
+      "category": "Email Security",
+      "description": "Cisco Secure Email (formerly IronPort) email security",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "\\.iphmx\\.com$",
+        "include:spf\\.cisco\\.com"
+      ],
+      "website": "https://www.cisco.com/c/en/us/products/security/secure-email.html"
+    },
+    {
+      "name": "Veracode",
+      "category": "Security",
+      "description": "Veracode application security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "veracode-site-verification=.*"
+      ],
+      "website": "https://www.veracode.com"
+    },
+    {
+      "name": "Carbon Black",
+      "category": "Security",
+      "description": "VMware Carbon Black endpoint protection platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "carbonblack-verification=.*",
+        "vmware-carbonblack-verification=.*"
+      ],
+      "website": "https://www.vmware.com/products/carbon-black-cloud.html"
+    },
+    {
+      "name": "Tripwire",
+      "category": "Security",
+      "description": "Tripwire security and compliance solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "tripwire-domain-verification=.*"
+      ],
+      "website": "https://www.tripwire.com"
+    },
+    {
+      "name": "Symantec Email Security",
+      "category": "Email Security",
+      "description": "Symantec/Broadcom email security service",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mx[0-9]+\\.messagelabs\\.com$",
+        "include:spf\\.messagelabs\\.com",
+        "include:spf\\.protection\\.outlook\\.com"
+      ],
+      "website": "https://www.broadcom.com/products/cyber-security/email"
+    },
+    {
+      "name": "FIDO Security Keys",
+      "category": "Authentication",
+      "description": "FIDO Alliance WebAuthn key configuration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "_webauthn\\..*"
+      ],
+      "website": "https://fidoalliance.org/"
+    },
+    {
+      "name": "Signal Sciences WAF",
+      "category": "Security",
+      "description": "Signal Sciences (Fastly) web application firewall",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "signal-sciences-verification=.*",
+        "sigsci-site-verification=.*"
+      ],
+      "website": "https://www.signalsciences.com"
+    },
+    {
+      "name": "Tanium",
+      "category": "Security",
+      "description": "Tanium endpoint management and security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "tanium-verification=.*"
+      ],
+      "website": "https://www.tanium.com"
+    },
+    {
+      "name": "Perception Point",
+      "category": "Email Security",
+      "description": "Perception Point email and collaboration security",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "perception-point-verification=.*",
+        "include:spf\\.perception-point\\.io"
+      ],
+      "website": "https://perception-point.io"
+    },
+    {
+      "name": "SecurityTrails",
+      "category": "Security",
+      "description": "SecurityTrails security intelligence platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "securitytrails-verification=.*"
+      ],
+      "website": "https://securitytrails.com"
+    },
+    {
+      "name": "Netskope",
+      "category": "Security",
+      "description": "Netskope security cloud platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.goskope\\.com$",
+        "\\.netskope\\.com$",
+        "netskope-verification=.*"
+      ],
+      "website": "https://www.netskope.com"
+    },
+    {
+      "name": "TLS-RPT",
+      "category": "Email Security",
+      "description": "SMTP TLS Reporting configuration for email security",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=TLSRPTv1.*"
+      ],
+      "website": "https://datatracker.ietf.org/doc/html/rfc8460"
+    },
+    {
+      "name": "MTA-STS",
+      "category": "Email Security",
+      "description": "SMTP MTA Strict Transport Security for email security",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=STSv1.*"
+      ],
+      "website": "https://datatracker.ietf.org/doc/html/rfc8461"
+    },
+    {
+      "name": "GeoTrust SSL",
+      "category": "SSL Certificate",
+      "description": "GeoTrust SSL certificate provider",
+      "recordTypes": ["CAA"],
+      "patterns": [
+        "0 issue \"geotrust\\.com\""
+      ],
+      "website": "https://www.geotrust.com"
+    },
+    {
+      "name": "Trustwave SSL",
+      "category": "SSL Certificate",
+      "description": "Trustwave SSL certificate provider",
+      "recordTypes": ["CAA", "TXT"],
+      "patterns": [
+        "0 issue \"trustwave\\.com\"",
+        "trustwave-domain-verification=.*"
+      ],
+      "website": "https://www.trustwave.com"
+    },
+    {
+      "name": "Cequence Security",
+      "category": "Security",
+      "description": "Cequence API security and bot defense platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cequence-verification=.*"
+      ],
+      "website": "https://www.cequence.ai"
+    },
+    {
+      "name": "Human Security",
+      "category": "Security",
+      "description": "Human Security (formerly White Ops) bot mitigation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "human-domain-verification=.*",
+        "whiteops-domain-verification=.*"
+      ],
+      "website": "https://www.humansecurity.com"
+    },
+    {
+      "name": "Armis",
+      "category": "Security",
+      "description": "Armis asset intelligence and security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "armis-domain-verification=.*"
+      ],
+      "website": "https://www.armis.com"
+    },
+    {
+      "name": "Mandiant",
+      "category": "Security",
+      "description": "Mandiant threat intelligence and incident response",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mandiant-verification=.*"
+      ],
+      "website": "https://www.mandiant.com"
+    },
+    {
+      "name": "Fortinet",
+      "category": "Security",
+      "description": "Fortinet cybersecurity solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "fortinet-domain-verification=.*"
+      ],
+      "website": "https://www.fortinet.com"
+    },
+    {
+      "name": "Trend Micro",
+      "category": "Security",
+      "description": "Trend Micro cybersecurity platform",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "trend-micro-domain-verification=.*",
+        "include:spf\\.trendmicro\\.com"
+      ],
+      "website": "https://www.trendmicro.com"
+    },
+    {
+      "name": "Sophos Central",
+      "category": "Security",
+      "description": "Sophos Central security management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "sophos-central-domain-verification=.*"
+      ],
+      "website": "https://www.sophos.com/en-us/products/sophos-central"
+    },
+    {
+      "name": "Recorded Future",
+      "category": "Security",
+      "description": "Recorded Future threat intelligence platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "recorded-future-verification=.*"
+      ],
+      "website": "https://www.recordedfuture.com"
+    },
+    {
+      "name": "ForgeRock",
+      "category": "Identity Management",
+      "description": "ForgeRock identity and access management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "forgerock-domain-verification=.*"
+      ],
+      "website": "https://www.forgerock.com"
+    },
+    {
+      "name": "RiskIQ",
+      "category": "Security",
+      "description": "RiskIQ digital threat management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "riskiq-verification=.*"
+      ],
+      "website": "https://www.riskiq.com"
+    },
+    {
+      "name": "ThreatMetrix",
+      "category": "Security",
+      "description": "ThreatMetrix digital identity intelligence platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "threatmetrix-verification=.*"
+      ],
+      "website": "https://risk.lexisnexis.com/products/threatmetrix"
+    },
+    {
+      "name": "BitSight",
+      "category": "Security",
+      "description": "BitSight security ratings platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "bitsight-domain-verification=.*"
+      ],
+      "website": "https://www.bitsight.com"
+    },
+    {
+      "name": "Lacework",
+      "category": "Security",
+      "description": "Lacework cloud security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "lacework-domain-verification=.*"
+      ],
+      "website": "https://www.lacework.com"
+    },
+    {
+      "name": "Abnormal Security",
+      "category": "Email Security",
+      "description": "Abnormal Security email security platform",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mx\\.abnormal\\.com$",
+        "include:spf\\.abnormal\\.com",
+        "abnormal-domain-verification=.*"
+      ],
+      "website": "https://www.abnormalsecurity.com"
+    },
+    {
+      "name": "Material Security",
+      "category": "Email Security",
+      "description": "Material Security email protection platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "material-security-verification=.*"
+      ],
+      "website": "https://material.security"
+    },
+    {
+      "name": "Bugcrowd",
+      "category": "Security",
+      "description": "Bugcrowd crowdsourced security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "bugcrowd-verification=.*"
+      ],
+      "website": "https://www.bugcrowd.com"
+    },
+    {
+      "name": "Synack",
+      "category": "Security",
+      "description": "Synack crowdsourced security testing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "synack-verification=.*"
+      ],
+      "website": "https://www.synack.com"
+    },
+    {
+      "name": "Onfido",
+      "category": "Identity Verification",
+      "description": "Onfido identity verification and authentication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "onfido-domain-verification=.*"
+      ],
+      "website": "https://onfido.com"
+    },
+    {
+      "name": "DomainTools",
+      "category": "Security",
+      "description": "DomainTools domain intelligence and threat investigation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "domaintools-verification=.*"
+      ],
+      "website": "https://www.domaintools.com"
+    },
+    {
+      "name": "Censys",
+      "category": "Security",
+      "description": "Censys attack surface management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "censys-verification=.*"
+      ],
+      "website": "https://censys.com"
+    },
+    {
+      "name": "Infoblox",
+      "category": "Security",
+      "description": "Infoblox secure DNS, DHCP, and IP address management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "infoblox-verification=.*"
+      ],
+      "website": "https://www.infoblox.com"
+    },
+    {
+      "name": "BeyondTrust",
+      "category": "Security",
+      "description": "BeyondTrust privileged access management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "beyondtrust-verification=.*"
+      ],
+      "website": "https://www.beyondtrust.com"
+    },
+    {
+      "name": "Malwarebytes",
+      "category": "Security",
+      "description": "Malwarebytes endpoint protection and remediation",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "malwarebytes-verification=.*"
+      ],
+      "website": "https://www.malwarebytes.com"
+    },
+    {
+      "name": "Secureworks",
+      "category": "Security",
+      "description": "Secureworks threat detection and response platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "secureworks-domain-verification=.*"
+      ],
+      "website": "https://www.secureworks.com"
+    },
+    {
+      "name": "Illumio",
+      "category": "Security",
+      "description": "Illumio zero trust segmentation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "illumio-verification=.*"
+      ],
+      "website": "https://www.illumio.com"
+    },
+    {
+      "name": "Barracuda WAF",
+      "category": "Security",
+      "description": "Barracuda Web Application Firewall",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.barracudanetworks\\.com$",
+        "\\.barracudabrts\\.com$"
+      ],
+      "website": "https://www.barracuda.com/products/webapplicationfirewall"
+    },
+    {
+      "name": "Mimecast DMARC Monitor",
+      "category": "Email Security",
+      "description": "Mimecast DMARC monitoring and management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=DMARC1.*rua=mailto:.*mimecast\\.com.*"
+      ],
+      "website": "https://www.mimecast.com/products/dmarc-analyzer/"
+    },
+    {
+      "name": "Valimail DMARC Monitor",
+      "category": "Email Security",
+      "description": "Valimail DMARC monitoring and management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=DMARC1.*rua=mailto:.*vali\\.email.*"
+      ],
+      "website": "https://www.valimail.com"
+    },
+    {
+      "name": "Virtru",
+      "category": "Data Security",
+      "description": "Virtru data protection and privacy platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "virtru-site-verification=.*"
+      ],
+      "website": "https://www.virtru.com"
+    },
+    {
+      "name": "Intel 471",
+      "category": "Threat Intelligence",
+      "description": "Intel 471 cyber threat intelligence",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "intel471-verification=.*"
+      ],
+      "website": "https://intel471.com"
+    },
+    {
+      "name": "PhishLabs",
+      "category": "Security",
+      "description": "PhishLabs digital risk protection services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "phishlabs-verification=.*"
+      ],
+      "website": "https://www.phishlabs.com"
+    },
+    {
+      "name": "Trellix",
+      "category": "Security",
+      "description": "Trellix (formerly McAfee Enterprise) extended detection and response platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "trellix-verification=.*",
+        "mcafee-verification=.*"
+      ],
+      "website": "https://www.trellix.com"
+    },
+    {
+      "name": "CrowdStrike Falcon Horizon",
+      "category": "Cloud Security",
+      "description": "CrowdStrike Falcon Horizon cloud security posture management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cs-domain-verification=.*",
+        "falcon-domain-verification=.*"
+      ],
+      "website": "https://www.crowdstrike.com/products/cloud-security/falcon-horizon-cspm/"
+    },
+    {
+      "name": "AppOmni",
+      "category": "SaaS Security",
+      "description": "AppOmni SaaS security management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "appomni-domain-verification=.*"
+      ],
+      "website": "https://appomni.com"
+    },
+    {
+      "name": "Orca Security",
+      "category": "Cloud Security",
+      "description": "Orca Security cloud security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "orca-security-verification=.*"
+      ],
+      "website": "https://orca.security"
+    },
+    {
+      "name": "Cloudflare WAF",
+      "category": "Security",
+      "description": "Cloudflare Web Application Firewall rules and custom configurations",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cloudflare-waf-verification=.*"
+      ],
+      "website": "https://www.cloudflare.com/application-services/products/waf/"
+    },
+    {
+      "name": "Arctic Wolf",
+      "category": "Security",
+      "description": "Arctic Wolf security operations platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "arcticwolf-domain-verification=.*"
+      ],
+      "website": "https://arcticwolf.com"
+    },
+    {
+      "name": "Guardicore",
+      "category": "Security",
+      "description": "Guardicore (Akamai) microsegmentation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "guardicore-verification=.*"
+      ],
+      "website": "https://www.guardicore.com"
+    },
+    {
+      "name": "Lookout",
+      "category": "Security",
+      "description": "Lookout mobile endpoint security and threat defense",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "lookout-verification=.*"
+      ],
+      "website": "https://www.lookout.com"
+    },
+    {
+      "name": "ExtraHop",
+      "category": "Security",
+      "description": "ExtraHop network detection and response platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "extrahop-verification=.*"
+      ],
+      "website": "https://www.extrahop.com"
+    },
+    {
+      "name": "Dragos",
+      "category": "Industrial Security",
+      "description": "Dragos industrial cybersecurity platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "dragos-verification=.*"
+      ],
+      "website": "https://www.dragos.com"
+    },
+    {
+      "name": "Zix",
+      "category": "Email Security",
+      "description": "Zix (OpenText) secure email solutions",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "include:spf\\.zixcentral\\.com",
+        "include:zixmail\\.com",
+        "mx\\.zixmail\\.com$"
+      ],
+      "website": "https://www.zix.com"
+    },
+    {
+      "name": "Nozomi Networks",
+      "category": "Industrial Security",
+      "description": "Nozomi Networks OT and IoT security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "nozomi-verification=.*"
+      ],
+      "website": "https://www.nozominetworks.com"
+    },
+    {
+      "name": "ThreatLocker",
+      "category": "Security",
+      "description": "ThreatLocker zero trust endpoint security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "threatlocker-verification=.*"
+      ],
+      "website": "https://www.threatlocker.com"
+    },
+    {
+      "name": "Acronis",
+      "category": "Security",
+      "description": "Acronis cyber protection solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "acronis-domain-verification=.*"
+      ],
+      "website": "https://www.acronis.com"
+    },
+    {
+      "name": "FireEye",
+      "category": "Security",
+      "description": "FireEye (Trellix) threat intelligence platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "fireeye-verification=.*"
+      ],
+      "website": "https://www.trellix.com"
+    },
+    {
+      "name": "Cofense",
+      "category": "Email Security",
+      "description": "Cofense phishing defense platform",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "cofense-domain-verification=.*",
+        "include:spf\\.cofense\\.com"
+      ],
+      "website": "https://cofense.com"
+    },
+    {
+      "name": "SonicWall",
+      "category": "Security",
+      "description": "SonicWall network security and cybersecurity platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "sonicwall-verification=.*"
+      ],
+      "website": "https://www.sonicwall.com"
+    },
+    {
+      "name": "Aqua Security",
+      "category": "Cloud Security",
+      "description": "Aqua Security cloud native security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "aqua-security-verification=.*"
+      ],
+      "website": "https://www.aquasec.com"
+    },
+    {
+      "name": "Elastic Security",
+      "category": "Security",
+      "description": "Elastic security information and event management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "elastic-security-verification=.*"
+      ],
+      "website": "https://www.elastic.co/security"
+    },
+    {
+      "name": "Alert Logic",
+      "category": "Security",
+      "description": "Alert Logic managed detection and response",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "alertlogic-verification=.*"
+      ],
+      "website": "https://www.alertlogic.com"
+    },
+    {
+      "name": "Silverfort",
+      "category": "Authentication",
+      "description": "Silverfort unified identity protection platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "silverfort-verification=.*"
+      ],
+      "website": "https://www.silverfort.com"
+    },
+    {
+      "name": "Thinkst Canary",
+      "category": "Security",
+      "description": "Thinkst Canary honeypot and deception platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "canary-domain-verification=.*"
+      ],
+      "website": "https://canary.tools"
+    },
+    {
+      "name": "Red Canary",
+      "category": "Security",
+      "description": "Red Canary security operations platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "redcanary-verification=.*"
+      ],
+      "website": "https://redcanary.com"
+    },
+    {
+      "name": "Vectra AI",
+      "category": "Security",
+      "description": "Vectra AI threat detection and response platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "vectra-verification=.*"
+      ],
+      "website": "https://www.vectra.ai"
+    },
+    {
+      "name": "Forcepoint",
+      "category": "Security",
+      "description": "Forcepoint security solutions",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "forcepoint-domain-verification=.*",
+        "include:spf\\.forcepoint\\.com"
+      ],
+      "website": "https://www.forcepoint.com"
+    },
+    {
+      "name": "Contrast Security",
+      "category": "Security",
+      "description": "Contrast Security application security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "contrast-security-verification=.*"
+      ],
+      "website": "https://www.contrastsecurity.com"
+    },
+    {
+      "name": "OPSWAT",
+      "category": "Security",
+      "description": "OPSWAT critical infrastructure protection",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "opswat-verification=.*"
+      ],
+      "website": "https://www.opswat.com"
+    },
+    {
+      "name": "Jumpsec",
+      "category": "Security",
+      "description": "Jumpsec offensive security services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "jumpsec-verification=.*"
+      ],
+      "website": "https://www.jumpsec.com"
+    },
+    {
+      "name": "Deep Instinct",
+      "category": "Security",
+      "description": "Deep Instinct deep learning cybersecurity platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "deepinstinct-verification=.*"
+      ],
+      "website": "https://www.deepinstinct.com"
+    },
+    {
+      "name": "Centrify",
+      "category": "Identity Management",
+      "description": "Centrify (Delinea) identity-centric privileged access management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "centrify-verification=.*"
+      ],
+      "website": "https://delinea.com"
+    },
+    {
+      "name": "DigiSafe/DigiCert BIMI",
+      "category": "Email Security",
+      "description": "DigiSafe/DigiCert BIMI certificate for email branding and security",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "v=BIMI1.*a=.*digicert\\.com.*"
+      ],
+      "website": "https://www.digicert.com/blog/introducing-digisafe-bimi"
+    },
+    {
+      "name": "Fly.io",
+      "category": "Cloud Platform",
+      "description": "Fly.io edge application platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.fly\\.dev$"
+      ],
+      "website": "https://fly.io"
+    },
+    {
+      "name": "Railway",
+      "category": "Cloud Platform",
+      "description": "Railway deployment platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.railway\\.app$"
+      ],
+      "website": "https://railway.app"
+    },
+    {
+      "name": "Deno Deploy",
+      "category": "Cloud Platform",
+      "description": "Deno Deploy serverless JavaScript platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.deno\\.dev$"
+      ],
+      "website": "https://deno.com/deploy"
+    },
+    {
+      "name": "Glitch",
+      "category": "Cloud Platform",
+      "description": "Glitch web development platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.glitch\\.me$",
+        "\\.glitch\\.com$"
+      ],
+      "website": "https://glitch.com"
+    },
+    {
+      "name": "Replit",
+      "category": "Cloud Platform",
+      "description": "Replit collaborative development platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.repl\\.co$",
+        "\\.replit\\.app$"
+      ],
+      "website": "https://replit.com"
+    },
+    {
+      "name": "Valimail",
+      "category": "Email Security",
+      "description": "Valimail email authentication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.valimail\\.com",
+        "valimail-domain-verification=.*"
+      ],
+      "website": "https://www.valimail.com"
+    },
+    {
+      "name": "Vircom",
+      "category": "Email Security",
+      "description": "Vircom email security solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.vircom\\.com"
+      ],
+      "website": "https://www.vircom.com"
+    },
+    {
+      "name": "Area 1 Security",
+      "category": "Email Security",
+      "description": "Cloudflare Area 1 email security service",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "include:spf\\.area1security\\.com",
+        "include:spf\\.emailsecurity\\.cloudflare\\.com",
+        "mx\\.area1security\\.com$",
+        "mx\\.emailsecurity\\.cloudflare\\.com$"
+      ],
+      "website": "https://www.cloudflare.com/products/zero-trust/email-security/"
+    },
+    {
+      "name": "KeyCDN",
+      "category": "CDN",
+      "description": "KeyCDN content delivery network",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.kxcdn\\.com$"
+      ],
+      "website": "https://www.keycdn.com"
+    },
+    {
+      "name": "StackPath",
+      "category": "CDN",
+      "description": "StackPath edge computing platform and CDN",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.stackpathdns\\.com$"
+      ],
+      "website": "https://www.stackpath.com"
+    },
+    {
+      "name": "Edgio",
+      "category": "CDN",
+      "description": "Edgio (formerly Layer0/Limelight) content delivery network",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.layer0-cdn\\.net$",
+        "\\.layer0\\.co$",
+        "\\.edgio\\.net$",
+        "\\.edgio\\.io$"
+      ],
+      "website": "https://edg.io"
+    },
+    {
+      "name": "BunnyCDN",
+      "category": "CDN",
+      "description": "BunnyCDN content delivery network",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.b-cdn\\.net$",
+        "\\.bunnycdn\\.com$"
+      ],
+      "website": "https://bunnycdn.com"
+    },
+    {
+      "name": "Descope",
+      "category": "Authentication",
+      "description": "Descope authentication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "descope-domain-verification=.*"
+      ],
+      "website": "https://www.descope.com"
+    },
+    {
+      "name": "WorkOS",
+      "category": "Authentication",
+      "description": "WorkOS enterprise authentication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "workos-domain-verification=.*"
+      ],
+      "website": "https://workos.com"
+    },
+    {
+      "name": "Clerk",
+      "category": "Authentication",
+      "description": "Clerk authentication and user management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "clerk-domain-verification=.*"
+      ],
+      "website": "https://clerk.com"
+    },
+    {
+      "name": "Stytch",
+      "category": "Authentication",
+      "description": "Stytch authentication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "stytch-domain-verification=.*"
+      ],
+      "website": "https://stytch.com"
+    },
+    {
+      "name": "Supabase",
+      "category": "Database & Authentication",
+      "description": "Supabase open source Firebase alternative",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "supabase-verification=.*"
+      ],
+      "website": "https://supabase.com"
+    },
+    {
+      "name": "Stability AI",
+      "category": "AI & Machine Learning",
+      "description": "Stability AI generative AI platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "stability-domain-verification=.*"
+      ],
+      "website": "https://stability.ai"
+    },
+    {
+      "name": "Replicate",
+      "category": "AI & Machine Learning",
+      "description": "Replicate AI model hosting platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "replicate-domain-verification=.*"
+      ],
+      "website": "https://replicate.com"
+    },
+    {
+      "name": "Pinecone",
+      "category": "AI & Vector Database",
+      "description": "Pinecone vector database for AI applications",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "pinecone-domain-verification=.*"
+      ],
+      "website": "https://www.pinecone.io"
+    },
+    {
+      "name": "LangChain",
+      "category": "AI & Machine Learning",
+      "description": "LangChain LLM application framework",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "langchain-domain-verification=.*"
+      ],
+      "website": "https://langchain.com"
+    },
+    {
+      "name": "Snyk",
+      "category": "Security",
+      "description": "Snyk security scanning platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "snyk-domain-verification=.*"
+      ],
+      "website": "https://snyk.io"
+    },
+    {
+      "name": "Check Point",
+      "category": "Security",
+      "description": "Check Point security solutions",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "checkpoint-domain-verification=.*",
+        "include:spf\\.checkpoint\\.com"
+      ],
+      "website": "https://www.checkpoint.com"
+    },
+    {
+      "name": "Imperva",
+      "category": "Security",
+      "description": "Imperva web application security",
+      "recordTypes": ["TXT", "CNAME"],
+      "patterns": [
+        "imperva-domain-verification=.*",
+        "imperva\\.com$"
+      ],
+      "website": "https://www.imperva.com"
+    },
+    {
+      "name": "Rapid7",
+      "category": "Security",
+      "description": "Rapid7 security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "rapid7-domain-verification=.*"
+      ],
+      "website": "https://www.rapid7.com"
+    },
+    {
+      "name": "Tenable",
+      "category": "Security",
+      "description": "Tenable vulnerability management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "tenable-domain-verification=.*"
+      ],
+      "website": "https://www.tenable.com"
+    },
+    {
+      "name": "Hashicorp",
+      "category": "Development",
+      "description": "Hashicorp infrastructure tools",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "hashicorp-domain-verification=.*"
+      ],
+      "website": "https://www.hashicorp.com"
+    },
+    {
+      "name": "Substack",
+      "category": "Email & Publishing",
+      "description": "Substack newsletter platform",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "substack-domain-verification=.*",
+        "mail\\.substack\\.com$"
+      ],
+      "website": "https://substack.com"
+    },
+    {
+      "name": "ConvertKit",
+      "category": "Email Marketing",
+      "description": "ConvertKit email marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "convertkit-domain-verification=.*",
+        "include:spf\\.convertkit\\.com"
+      ],
+      "website": "https://convertkit.com"
+    },
+    {
+      "name": "AWeber",
+      "category": "Email Marketing",
+      "description": "AWeber email marketing service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.aweber\\.com"
+      ],
+      "website": "https://www.aweber.com"
+    },
+    {
+      "name": "ActiveCampaign",
+      "category": "Email Marketing",
+      "description": "ActiveCampaign marketing automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "activecampaign-domain-verification=.*",
+        "include:spf\\.activecampaign\\.com"
+      ],
+      "website": "https://www.activecampaign.com"
+    },
+    {
+      "name": "MailerLite",
+      "category": "Email Marketing",
+      "description": "MailerLite email marketing service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mailerlite-domain-verification=.*",
+        "include:spf\\.mailerlite\\.com"
+      ],
+      "website": "https://www.mailerlite.com"
+    },
+    {
+      "name": "Loom",
+      "category": "Video & Collaboration",
+      "description": "Loom video messaging platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "loom-domain-verification=.*"
+      ],
+      "website": "https://www.loom.com"
+    },
+    {
+      "name": "Lucidchart",
+      "category": "Productivity",
+      "description": "Lucidchart diagramming and visualization platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "lucid-domain-verification=.*"
+      ],
+      "website": "https://www.lucidchart.com"
+    },
+    {
+      "name": "Mural",
+      "category": "Collaboration",
+      "description": "Mural visual collaboration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "mural-domain-verification=.*"
+      ],
+      "website": "https://www.mural.co"
+    },
+    {
+      "name": "WP Engine",
+      "category": "Web Hosting",
+      "description": "WP Engine WordPress hosting platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "\\.wpengine\\.com$"
+      ],
+      "website": "https://wpengine.com"
+    },
+    {
+      "name": "Kinsta",
+      "category": "Web Hosting",
+      "description": "Kinsta managed WordPress hosting",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.kinsta\\.cloud$",
+        "kinsta-domain-verification=.*"
+      ],
+      "website": "https://kinsta.com"
+    },
+    {
+      "name": "Shopify Plus",
+      "category": "E-commerce",
+      "description": "Shopify Plus enterprise e-commerce platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        "shops\\.plus\\.shopify\\.com$"
+      ],
+      "website": "https://www.shopify.com/plus"
+    },
+    {
+      "name": "LastPass",
+      "category": "Security",
+      "description": "LastPass password manager",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "lastpass-domain-verification=.*"
+      ],
+      "website": "https://www.lastpass.com"
+    },
+    {
+      "name": "Barracuda Email Security",
+      "category": "Email Security",
+      "description": "Barracuda email security and protection services",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mx\\.barracudanetworks\\.com$",
+        "include:spf\\.barracudanetworks\\.com"
+      ],
+      "website": "https://www.barracuda.com/products/email-protection"
+    },
+    {
+      "name": "Sophos Email",
+      "category": "Email Security",
+      "description": "Sophos email security and protection platform",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mx[0-9]+\\.sophos\\.com$",
+        "include:spf\\.sophosxl\\.net"
+      ],
+      "website": "https://www.sophos.com/en-us/products/sophos-email"
+    },
+    {
+      "name": "FortiMail",
+      "category": "Email Security",
+      "description": "Fortinet FortiMail email security solution",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "include:spf\\.fortimail\\.com",
+        "\\.fortimailcloud\\.com$"
+      ],
+      "website": "https://www.fortinet.com/products/email-security/fortimail"
+    },
+    {
+      "name": "Monday.com",
+      "category": "Project Management",
+      "description": "Monday.com work operating system and project management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "monday-domain-verification=.*"
+      ],
+      "website": "https://monday.com"
+    },
+    {
+      "name": "Trello",
+      "category": "Project Management",
+      "description": "Trello project management and collaboration tool",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "trello-domain-verification=.*"
+      ],
+      "website": "https://trello.com"
+    },
+    {
+      "name": "Linear",
+      "category": "Project Management",
+      "description": "Linear issue tracking and project management tool",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "linear-domain-verification=.*"
+      ],
+      "website": "https://linear.app"
+    },
+    {
+      "name": "PagerDuty",
+      "category": "Incident Management",
+      "description": "PagerDuty incident response platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "pagerduty-verification=.*"
+      ],
+      "website": "https://www.pagerduty.com"
+    },
+    {
+      "name": "Hugging Face",
+      "category": "AI & Machine Learning",
+      "description": "Hugging Face AI model hosting and collaboration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "huggingface-site-verification=.*"
+      ],
+      "website": "https://huggingface.co"
+    },
+    {
+      "name": "Amplitude",
+      "category": "Analytics",
+      "description": "Amplitude product analytics platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "amplitude-domain-verification=.*"
+      ],
+      "website": "https://amplitude.com"
+    },
+    {
+      "name": "Hotjar",
+      "category": "Analytics",
+      "description": "Hotjar user behavior analytics and feedback platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "hotjar-domain-verification=.*"
+      ],
+      "website": "https://www.hotjar.com"
+    },
+    {
+      "name": "FullStory",
+      "category": "Analytics",
+      "description": "FullStory digital experience analytics platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "fullstory-domain-verification=.*"
+      ],
+      "website": "https://www.fullstory.com"
+    },
+    {
+      "name": "Braze",
+      "category": "Marketing Automation",
+      "description": "Braze customer engagement platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "braze-verification=.*"
+      ],
+      "website": "https://www.braze.com"
+    },
+    {
+      "name": "PayPal",
+      "category": "Payment Processing",
+      "description": "PayPal payment processing service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "paypal-domain-verification=.*"
+      ],
+      "website": "https://www.paypal.com"
+    },
+    {
+      "name": "Square",
+      "category": "Payment Processing",
+      "description": "Square payment processing and business solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "square-domain-verification=.*"
+      ],
+      "website": "https://squareup.com"
+    },
+    {
+      "name": "Adyen",
+      "category": "Payment Processing",
+      "description": "Adyen payment platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "adyen-domain-verification=.*",
+        "adyen-verification=.*"
+      ],
+      "website": "https://www.adyen.com"
+    },
+    {
+      "name": "Chargebee",
+      "category": "Subscription Management",
+      "description": "Chargebee subscription billing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "chargebee-domain-verification=.*"
+      ],
+      "website": "https://www.chargebee.com"
+    },
+    {
+      "name": "IBM Cloud",
+      "category": "Cloud Services",
+      "description": "IBM Cloud platform services",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        "\\.appdomain\\.cloud$",
+        "ibm-cloud-verification=.*"
+      ],
+      "website": "https://www.ibm.com/cloud"
+    },
+    {
+      "name": "SparkPost",
+      "category": "Email Delivery",
+      "description": "SparkPost email delivery and analytics platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:sparkpostmail\\.com"
+      ],
+      "website": "https://www.sparkpost.com"
+    },
+    {
+      "name": "Postmark",
+      "category": "Email Delivery",
+      "description": "Postmark transactional email service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.mtasv\\.net"
+      ],
+      "website": "https://postmarkapp.com"
+    },
+    {
+      "name": "MailChannels",
+      "category": "Email Infrastructure",
+      "description": "MailChannels email infrastructure and delivery service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:relay\\.mailchannels\\.net"
+      ],
+      "website": "https://www.mailchannels.com"
+    },
+    {
+      "name": "Okta",
+      "category": "Identity Management",
+      "description": "Okta identity and access management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "okta-domain-verification=.*"
+      ],
+      "website": "https://www.okta.com"
+    },
+    {
+      "name": "Auth0",
+      "category": "Identity Management",
+      "description": "Auth0 identity platform for authentication and authorization",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "auth0-domain-verification=.*"
+      ],
+      "website": "https://auth0.com"
+    },
+    {
+      "name": "OneLogin",
+      "category": "Identity Management",
+      "description": "OneLogin identity and access management provider",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "onelogin-domain-verification=.*"
+      ],
+      "website": "https://www.onelogin.com"
+    },
+    {
+      "name": "DigitalOcean DNS",
+      "category": "DNS Hosting",
+      "description": "DigitalOcean cloud infrastructure provider",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "ns[0-9]+\\.digitalocean\\.com\\."
+      ],
+      "website": "https://www.digitalocean.com"
+    },
+    {
+      "name": "Linode DNS",
+      "category": "DNS Hosting",
+      "description": "Linode/Akamai Cloud hosting and infrastructure",
+      "recordTypes": ["NS"],
+      "patterns": [
+        "ns[0-9]+\\.linode\\.com\\."
+      ],
+      "website": "https://www.linode.com"
+    },
+    {
+      "name": "Render",
+      "category": "Cloud Platform",
+      "description": "Render cloud application platform",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        ".*\\.onrender\\.com$"
+      ],
+      "website": "https://render.com"
+    },
+    {
+      "name": "Heroku",
+      "category": "Cloud Platform",
+      "description": "Heroku cloud platform as a service",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        ".*\\.herokuapp\\.com$"
+      ],
+      "website": "https://www.heroku.com"
+    },
+    {
+      "name": "WordPress VIP",
+      "category": "Web Hosting",
+      "description": "WordPress VIP enterprise hosting platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        ".*\\.wordpress\\.com$",
+        "wordpress-site-verification=.*"
+      ],
+      "website": "https://wpvip.com"
+    },
+    {
+      "name": "Webflow",
+      "category": "Web Hosting",
+      "description": "Webflow website builder and hosting platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        ".*\\.webflow\\.io$",
+        "webflow-domain-verification=.*"
+      ],
+      "website": "https://webflow.com"
+    },
+    {
+      "name": "Squarespace",
+      "category": "Web Hosting",
+      "description": "Squarespace website builder and hosting platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        ".*\\.squarespace\\.com$",
+        "squarespace-domain-verification=.*"
+      ],
+      "website": "https://www.squarespace.com"
+    },
+    {
+      "name": "Wix",
+      "category": "Web Hosting",
+      "description": "Wix website builder platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        ".*\\.wixsite\\.com$",
+        "wix-domain-verification=.*"
+      ],
+      "website": "https://www.wix.com"
+    },
+    {
+      "name": "BigCommerce",
+      "category": "E-commerce",
+      "description": "BigCommerce e-commerce platform",
+      "recordTypes": ["CNAME", "TXT"],
+      "patterns": [
+        ".*\\.bigcommerce\\.com$",
+        "bigcommerce-domain-verification=.*"
+      ],
+      "website": "https://www.bigcommerce.com"
+    },
+    {
+      "name": "WooCommerce",
+      "category": "E-commerce",
+      "description": "WooCommerce WordPress e-commerce plugin",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "woocommerce-site-verification=.*"
+      ],
+      "website": "https://woocommerce.com"
+    },
+    {
+      "name": "Cloudflare Zero Trust",
+      "category": "Security",
+      "description": "Cloudflare Zero Trust security solution",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cloudflare-zero-trust-verification=.*"
+      ],
+      "website": "https://www.cloudflare.com/zero-trust/"
+    },
+    {
+      "name": "CrowdStrike",
+      "category": "Security",
+      "description": "CrowdStrike endpoint protection platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "crowdstrike-domain-verification=.*"
+      ],
+      "website": "https://www.crowdstrike.com"
+    },
+    {
+      "name": "CyberArk",
+      "category": "Security",
+      "description": "CyberArk privileged access management",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cyberark-domain-verification=.*"
+      ],
+      "website": "https://www.cyberark.com"
+    },
+    {
+      "name": "Discord",
+      "category": "Communication",
+      "description": "Discord communication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "discord-verification=.*"
+      ],
+      "website": "https://discord.com"
+    },
+    {
+      "name": "Google Chat",
+      "category": "Communication",
+      "description": "Google Chat communication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "google-chat-verification=.*"
+      ],
+      "website": "https://chat.google.com"
+    },
+    {
+      "name": "Anthropic",
+      "category": "AI & Machine Learning",
+      "description": "Anthropic AI company",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "anthropic-verification=.*"
+      ],
+      "website": "https://www.anthropic.com"
+    },
+    {
+      "name": "Cohere",
+      "category": "AI & Machine Learning",
+      "description": "Cohere AI platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cohere-domain-verification=.*"
+      ],
+      "website": "https://cohere.ai"
+    },
+    {
+      "name": "Weights & Biases",
+      "category": "AI & Machine Learning",
+      "description": "Weights & Biases machine learning platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "wandb-domain-verification=.*"
+      ],
+      "website": "https://wandb.ai"
+    },
+    {
+      "name": "GitLab",
+      "category": "Development",
+      "description": "GitLab DevOps platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "gitlab-domain-verification=.*"
+      ],
+      "website": "https://gitlab.com"
+    },
+    {
+      "name": "CircleCI",
+      "category": "Development",
+      "description": "CircleCI continuous integration platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "circleci-domain-verification=.*"
+      ],
+      "website": "https://circleci.com"
+    },
+    {
+      "name": "Sentry",
+      "category": "Development",
+      "description": "Sentry error tracking and performance monitoring",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "sentry-verification=.*"
+      ],
+      "website": "https://sentry.io"
+    },
+    {
+      "name": "Vimeo",
+      "category": "Video & Streaming",
+      "description": "Vimeo video hosting platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "vimeo-domain-verification=.*"
+      ],
+      "website": "https://vimeo.com"
+    },
+    {
+      "name": "Wistia",
+      "category": "Video & Streaming",
+      "description": "Wistia business video hosting platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "wistia-domain-verification=.*"
+      ],
+      "website": "https://wistia.com"
+    },
+    {
+      "name": "Calendly",
+      "category": "Productivity",
+      "description": "Calendly scheduling and appointment booking platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "calendly-domain-verification=.*"
+      ],
+      "website": "https://calendly.com"
+    },
+    {
+      "name": "LaunchDarkly",
+      "category": "Development",
+      "description": "LaunchDarkly feature management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "launchdarkly-domain-verification=.*"
+      ],
+      "website": "https://launchdarkly.com"
+    },
+    {
+      "name": "Asana",
+      "category": "Productivity",
+      "description": "Asana work management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "asana-domain-verification=.*"
+      ],
+      "website": "https://asana.com"
+    },
+    {
+      "name": "Cloudinary",
+      "category": "Media Management",
+      "description": "Cloudinary digital asset management platform",
+      "recordTypes": ["TXT", "CNAME"],
+      "patterns": [
+        "cloudinary-domain-verification=.*",
+        ".*\\.cloudinary\\.com$"
+      ],
+      "website": "https://cloudinary.com"
+    },
+    {
+      "name": "Databricks",
+      "category": "Data & Analytics",
+      "description": "Databricks data and AI platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "databricks-domain-verification=.*"
+      ],
+      "website": "https://www.databricks.com"
+    },
+    {
+      "name": "Datadog",
+      "category": "Monitoring",
+      "description": "Datadog monitoring and security platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "datadog-domain-verification=.*"
+      ],
+      "website": "https://www.datadog.com"
+    },
+    {
+      "name": "New Relic",
+      "category": "Monitoring",
+      "description": "New Relic observability platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "newrelic-domain-verification=.*"
+      ],
+      "website": "https://newrelic.com"
+    },
+    {
+      "name": "Front",
+      "category": "Customer Communication",
+      "description": "Front customer communication platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "front-domain-verification=.*"
+      ],
+      "website": "https://front.com"
+    },
+    {
+      "name": "Intercom",
+      "category": "Customer Communication",
+      "description": "Intercom customer messaging platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "intercom-domain-verification=.*"
+      ],
+      "website": "https://www.intercom.com"
+    },
+    {
+      "name": "Notion Branded Domain",
+      "category": "Productivity",
+      "description": "Notion branded domain configuration",
+      "recordTypes": ["CNAME"],
+      "patterns": [
+        ".*\\.notion\\.site$"
+      ],
+      "website": "https://www.notion.so"
+    },
+    {
       "name": "Microsoft Teams/Skype for Business",
       "category": "Communication",
       "description": "Microsoft Teams and Skype for Business unified communications platform",
