@@ -1,6 +1,17 @@
 {
   "signatures": [
     {
+      "name": "Namecheap Email Forwarding",
+      "category": "Email Services",
+      "description": "Namecheap's email forwarding service for domain registrants",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "eforward[0-9]+\\.registrar-servers\\.com",
+        "include:spf\\.efwd\\.registrar-servers\\.com"
+      ],
+      "website": "https://www.namecheap.com/support/knowledgebase/article.aspx/308/2214/how-to-set-up-free-email-forwarding/"
+    },
+    {
       "name": "Coda",
       "category": "Productivity",
       "description": "Coda document collaboration platform",
