@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"strings"
 
 	"github.com/Elite-Security-Systems/radar/internal/models"
 )
@@ -14,6 +15,9 @@ func DetectTechnologies(records []models.DNSResponse, signatures models.Signatur
 	detectedMap := make(map[string]bool) // To avoid duplicates
 
 	for _, record := range records {
+		// Normalize record value by trimming any trailing periods for consistent matching
+		normalizedValue := strings.TrimSuffix(record.Value, ".")
+		
 		// Check each signature against this record
 		for _, sig := range signatures.Signatures {
 			// Skip if the signature doesn't apply to this record type
@@ -29,7 +33,26 @@ func DetectTechnologies(records []models.DNSResponse, signatures models.Signatur
 					continue
 				}
 
+				// Try to match the original value
 				if re.MatchString(record.Value) {
+					// Avoid duplicates
+					key := sig.Name
+					if _, exists := detectedMap[key]; !exists {
+						detectedMap[key] = true
+						detectedTechnologies = append(detectedTechnologies, models.DetectedTechnology{
+							Name:        sig.Name,
+							Category:    sig.Category,
+							Description: sig.Description,
+							Website:     sig.Website,
+							Evidence:    record.Value,
+							RecordType:  record.RecordType,
+						})
+					}
+					break // No need to check other patterns for this signature
+				}
+				
+				// If no match with original value, try with normalized value (without trailing period)
+				if normalizedValue != record.Value && re.MatchString(normalizedValue) {
 					// Avoid duplicates
 					key := sig.Name
 					if _, exists := detectedMap[key]; !exists {
