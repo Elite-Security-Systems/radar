@@ -8,6 +8,11 @@
 
 RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS reconnaissance tool designed to identify technologies and services used by domains through their DNS footprints. Developed by [Elite Security Systems](https://elitesecurity.systems), RADAR can detect hundreds of technologies including cloud services, email providers, CDNs, security services, and more.
 
+## In action
+
+<p align="center">
+  <img src="static/terminal.png" alt="RADAR Terminal">
+</p>
 ## Features
 
 - 🔍 **Comprehensive DNS Scanning**: Queries all relevant DNS record types (A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, etc.)
