@@ -10,13 +10,13 @@ RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS r
 
 ## Features
 
-- � **Comprehensive DNS Scanning**: Queries all relevant DNS record types (A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, etc.)
-- �️ **Technology Detection**: Identifies technologies using pattern matching against an extensive signature database
+- 🔍 **Comprehensive DNS Scanning**: Queries all relevant DNS record types (A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, etc.)
+- 🛡️ **Technology Detection**: Identifies technologies using pattern matching against an extensive signature database
 - ⚡ **Performance Optimized**: Uses parallel queries and multiple resolvers for efficient scanning
-- � **Extensible**: Easy to add new technology signatures via the JSON signature database
-- � **Detailed Reporting**: Produces structured JSON output for easy integration with other tools
-- � **Robust Resolving**: Leverages both system DNS resolver and public DNS services for maximum coverage
-- � **Auto-Updates**: Automatically downloads the latest signatures from GitHub
+- 🧩 **Extensible**: Easy to add new technology signatures via the JSON signature database
+- 📊 **Detailed Reporting**: Produces structured JSON output for easy integration with other tools
+- 🌐 **Robust Resolving**: Leverages both system DNS resolver and public DNS services for maximum coverage
+- 🧠 **Auto-Updates**: Automatically downloads the latest signatures from GitHub
 
 ## Installation
 
