@@ -38,6 +38,26 @@ go build -o radar ./cmd/radar
 go install ./cmd/radar
 ```
 
+### Basic Docker Usage
+
+To scan a domain:
+
+```bash
+docker run elitesecuritysystems/radar -domain example.com
+```
+
+To include all DNS records in the output:
+
+```bash
+docker run elitesecuritysystems/radar -domain example.com -all-records
+```
+
+To force signature updates:
+
+```bash
+docker run elitesecuritysystems/radar -update-signatures
+```
+
 ## Quick Start
 
 ```bash
