@@ -1143,12 +1143,33 @@
       "name": "Shopify",
       "category": "E-commerce",
       "description": "Shopify e-commerce platform",
-      "recordTypes": ["CNAME", "A"],
+      "recordTypes": ["CNAME", "A", "TXT"],
       "patterns": [
         "shops\\.myshopify\\.com$",
-        "\\.shopify\\.com$"
+        "\\.shopify\\.com$",
+        "shopify-verification-code=.*"
       ],
       "website": "https://www.shopify.com"
+    },
+    {
+      "name": "Figma",
+      "category": "Design & Collaboration",
+      "description": "Figma cloud-based design tool",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "figma-domain-verification=.*"
+      ],
+      "website": "https://www.figma.com"
+    },
+    {
+      "name": "Oracle Email Delivery",
+      "category": "Email Delivery",
+      "description": "Oracle Cloud Infrastructure Email Delivery service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:.*\\.rp\\.oracleemaildelivery\\.com"
+      ],
+      "website": "https://www.oracle.com/cloud/networking/email-delivery/"
     },
     {
       "name": "Cloudflare",
