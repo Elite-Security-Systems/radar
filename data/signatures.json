@@ -1,6 +1,66 @@
 {
   "signatures": [
     {
+      "name": "Dropbox",
+      "category": "Cloud Storage",
+      "description": "Dropbox file hosting and cloud storage service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "dropbox-domain-verification=.*"
+      ],
+      "website": "https://www.dropbox.com"
+    },
+    {
+      "name": "Parallels",
+      "category": "Virtualization",
+      "description": "Parallels virtualization and remote access software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "parallels-domain-verification=.*"
+      ],
+      "website": "https://www.parallels.com"
+    },
+    {
+      "name": "SPF Report",
+      "category": "Email Security",
+      "description": "SPF report service for email authentication monitoring",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "redirect=.*\\.hosted\\.spf-report\\.com"
+      ],
+      "website": "https://spf-report.com"
+    },
+    {
+      "name": "Ahrefs",
+      "category": "SEO & Marketing",
+      "description": "Ahrefs SEO tools and marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "ahrefs-site-verification_.*"
+      ],
+      "website": "https://ahrefs.com"
+    },
+    {
+      "name": "EnTrust Mail",
+      "category": "Email Security",
+      "description": "EnTrusted Mail email security service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.entrustedmail\\.net"
+      ],
+      "website": "https://www.entrustedmail.com"
+    },
+    {
+      "name": "Constant Contact",
+      "category": "Email Marketing",
+      "description": "Constant Contact email marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "ca3-[a-f0-9]+"
+      ],
+      "website": "https://www.constantcontact.com"
+    },
+    {
       "name": "Airtable",
       "category": "Productivity",
       "description": "Airtable cloud collaboration platform",
