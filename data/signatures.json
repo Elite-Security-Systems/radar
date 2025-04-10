@@ -1,12 +1,43 @@
 {
   "signatures": [
     {
+      "name": "Jamf",
+      "category": "Mobile Device Management",
+      "description": "Jamf Apple device management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "jamf-site-verification=.*"
+      ],
+      "website": "https://www.jamf.com"
+    },
+    {
+      "name": "OneTrust",
+      "category": "Privacy Management",
+      "description": "OneTrust privacy, security and data governance platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "onetrust-domain-verification=.*"
+      ],
+      "website": "https://www.onetrust.com"
+    },
+    {
+      "name": "Uber Verification",
+      "category": "Integration",
+      "description": "Uber platform domain verification",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "uber-domain-verification=.*"
+      ],
+      "website": "https://www.uber.com"
+    },
+    {
       "name": "Proofpoint",
       "category": "Email Security",
       "description": "Proofpoint email protection and security platform",
       "recordTypes": ["MX"],
       "patterns": [
-        "\\.pphosted\\.com\\.$"
+        "\\.pphosted\\.com\\.$",
+		".*\\.iphmx\\.com\\.$"
       ],
       "website": "https://www.proofpoint.com"
     },
@@ -291,7 +322,8 @@
       "description": "Mailchimp's Mandrill transactional email service",
       "recordTypes": ["TXT"],
       "patterns": [
-        "include:spf\\.mandrillapp\\.com"
+        "include:spf\\.mandrillapp\\.com",
+        "mandrill_verify\\..*"
       ],
       "website": "https://mailchimp.com/features/transactional-email/"
     },
