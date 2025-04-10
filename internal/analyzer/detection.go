@@ -15,7 +15,7 @@ func DetectTechnologies(records []models.DNSResponse, signatures models.Signatur
 	detectedMap := make(map[string]bool) // To avoid duplicates
 
 	for _, record := range records {
-		// Normalize record value by trimming any trailing periods for consistent matching
+		// Create normalized versions of the record value for more robust matching
 		normalizedValue := strings.TrimSuffix(record.Value, ".")
 		
 		// Check each signature against this record
@@ -33,26 +33,16 @@ func DetectTechnologies(records []models.DNSResponse, signatures models.Signatur
 					continue
 				}
 
-				// Try to match the original value
+				// First try with the original value
+				matched := false
 				if re.MatchString(record.Value) {
-					// Avoid duplicates
-					key := sig.Name
-					if _, exists := detectedMap[key]; !exists {
-						detectedMap[key] = true
-						detectedTechnologies = append(detectedTechnologies, models.DetectedTechnology{
-							Name:        sig.Name,
-							Category:    sig.Category,
-							Description: sig.Description,
-							Website:     sig.Website,
-							Evidence:    record.Value,
-							RecordType:  record.RecordType,
-						})
-					}
-					break // No need to check other patterns for this signature
+					matched = true
+				} else if normalizedValue != record.Value && re.MatchString(normalizedValue) {
+					// If that doesn't match, try with the normalized value
+					matched = true
 				}
-				
-				// If no match with original value, try with normalized value (without trailing period)
-				if normalizedValue != record.Value && re.MatchString(normalizedValue) {
+
+				if matched {
 					// Avoid duplicates
 					key := sig.Name
 					if _, exists := detectedMap[key]; !exists {
