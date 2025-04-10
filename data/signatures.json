@@ -1,6 +1,46 @@
 {
   "signatures": [
     {
+      "name": "JetBrains",
+      "category": "Development Tools",
+      "description": "JetBrains development tools and IDEs",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "jetbrains-domain-verification=.*"
+      ],
+      "website": "https://www.jetbrains.com"
+    },
+    {
+      "name": "Atlassian Status Page",
+      "category": "Monitoring",
+      "description": "Atlassian Status Page service for status monitoring",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "status-page-domain-verification=.*"
+      ],
+      "website": "https://www.atlassian.com/software/statuspage"
+    },
+    {
+      "name": "Onet",
+      "category": "Email & Services",
+      "description": "Onet Polish internet portal and services",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "onet-domain-verification=.*"
+      ],
+      "website": "https://www.onet.pl"
+    },
+    {
+      "name": "EMSD1",
+      "category": "Email Delivery",
+      "description": "EMSD1 email delivery service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:emsd1\\.com"
+      ],
+      "website": "https://emsd1.com"
+    },
+    {
       "name": "Facebook Workplace",
       "category": "Communication",
       "description": "Facebook Workplace enterprise collaboration platform",
