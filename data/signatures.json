@@ -1,6 +1,26 @@
 {
   "signatures": [
     {
+      "name": "ConfigCat",
+      "category": "Development",
+      "description": "ConfigCat feature flag and configuration management service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "configcat-domain-verification=.*"
+      ],
+      "website": "https://configcat.com"
+    },
+    {
+      "name": "Beautiful.ai",
+      "category": "Productivity",
+      "description": "Beautiful.ai AI-powered presentation software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "beautifulai-site-verification=.*"
+      ],
+      "website": "https://www.beautiful.ai"
+    },
+    {
       "name": "1Password",
       "category": "Security",
       "description": "1Password password management and secure storage",
