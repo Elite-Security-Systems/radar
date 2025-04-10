@@ -13,6 +13,7 @@ RADAR (Recognition and DNS Analysis for Resource detection) is an advanced DNS r
 <p align="center">
   <img src="static/terminal.png" alt="RADAR Terminal">
 </p>
+
 ## Features
 
 - 🔍 **Comprehensive DNS Scanning**: Queries all relevant DNS record types (A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, etc.)
