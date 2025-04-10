@@ -1,6 +1,67 @@
 {
   "signatures": [
     {
+      "name": "Yardi",
+      "category": "Real Estate Management",
+      "description": "Yardi property and real estate management software",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:asp-spf[0-9]+\\.yardi\\.com"
+      ],
+      "website": "https://www.yardi.com"
+    },
+    {
+      "name": "Campaign Monitor",
+      "category": "Email Marketing",
+      "description": "Campaign Monitor email marketing and automation platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:_spf\\.createsend\\.com"
+      ],
+      "website": "https://www.campaignmonitor.com"
+    },
+    {
+      "name": "Exclaimer",
+      "category": "Email Management",
+      "description": "Exclaimer email signature management solution",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:spf\\.[A-Z]{2}\\.exclaimer\\.net"
+      ],
+      "website": "https://www.exclaimer.com"
+    },
+    {
+      "name": "Infobip",
+      "category": "Communication",
+      "description": "Infobip omnichannel communication platform with email messaging services",
+      "recordTypes": ["TXT", "MX"],
+      "patterns": [
+        "include:email-messaging\\.com",
+        "mx\\.email-messaging\\.com"
+      ],
+      "website": "https://www.infobip.com"
+    },
+    {
+      "name": "BitWarden",
+      "category": "Security",
+      "description": "BitWarden open-source password management solution",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "bw=.*"
+      ],
+      "website": "https://bitwarden.com"
+    },
+    {
+      "name": "Sailthru",
+      "category": "Email Marketing",
+      "description": "Sailthru personalized email marketing platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:aspmx\\.sailthru\\.com"
+      ],
+      "website": "https://www.sailthru.com"
+    },
+    {
       "name": "Dropbox",
       "category": "Cloud Storage",
       "description": "Dropbox file hosting and cloud storage service",
@@ -1235,7 +1296,8 @@
       "recordTypes": ["TXT", "CNAME"],
       "patterns": [
         "k1._domainkey\\..*\\.mc\\.mailchimp\\.com$",
-        "mailchimp\\.com$"
+        "mailchimp\\.com$",
+		"include:servers\\.mcsv\\.net"
       ],
       "website": "https://mailchimp.com"
     },
