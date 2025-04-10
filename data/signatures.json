@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "Microsoft Teams/Skype for Business",
+      "category": "Communication",
+      "description": "Microsoft Teams and Skype for Business unified communications platform",
+      "recordTypes": ["SRV"],
+      "patterns": [
+        "sip.*\\.online\\.lync\\.com"
+      ],
+      "website": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software"
+    },
+    {
       "name": "Namecheap Email Forwarding",
       "category": "Email Services",
       "description": "Namecheap's email forwarding service for domain registrants",
