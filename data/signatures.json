@@ -1,6 +1,66 @@
 {
   "signatures": [
     {
+      "name": "Box",
+      "category": "Cloud Storage",
+      "description": "Box cloud content management and file sharing service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "box-domain-verification=.*"
+      ],
+      "website": "https://www.box.com"
+    },
+    {
+      "name": "LiveRamp",
+      "category": "Data Management",
+      "description": "LiveRamp data connectivity platform for identity resolution",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "liveramp-site-verification=.*"
+      ],
+      "website": "https://liveramp.com"
+    },
+    {
+      "name": "Whimsical",
+      "category": "Collaboration",
+      "description": "Whimsical visual workspace for diagramming and collaboration",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "whimsical=.*"
+      ],
+      "website": "https://whimsical.com"
+    },
+    {
+      "name": "Cursor",
+      "category": "Development",
+      "description": "Cursor AI-powered code editor and development environment",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cursor-domain-verification.*=.*"
+      ],
+      "website": "https://cursor.sh"
+    },
+    {
+      "name": "Amazon Business",
+      "category": "E-commerce",
+      "description": "Amazon Business verification for business accounts",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "amazon-business-verification=.*"
+      ],
+      "website": "https://business.amazon.com"
+    },
+    {
+      "name": "Cyweta DNS",
+      "category": "Security",
+      "description": "Cyweta DNS security and management platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "cywetadns-domain-verification=.*"
+      ],
+      "website": "https://www.cyweta.com"
+    },
+    {
       "name": "JangoMail",
       "category": "Email Marketing",
       "description": "JangoMail email marketing and mass email service",
@@ -2474,16 +2534,6 @@
       "website": "https://sendgrid.com"
     },
     {
-      "name": "Pardot SPF",
-      "category": "Marketing Automation",
-      "description": "Salesforce Pardot SPF records for email sending",
-      "recordTypes": ["TXT"],
-      "patterns": [
-        "include:aspmx\\.pardot\\.com"
-      ],
-      "website": "https://www.pardot.com"
-    },
-    {
       "name": "HackerOne",
       "category": "Security",
       "description": "HackerOne bug bounty and vulnerability coordination platform",
@@ -2510,6 +2560,7 @@
       "recordTypes": ["TXT"],
       "patterns": [
         "brevo-code:.*",
+        "Sendinblue-code:.*",
         "include:spf\\.brevo\\.com"
       ],
       "website": "https://www.brevo.com"
@@ -2593,16 +2644,6 @@
 		".*NSEC3PARAM.*"
       ],
       "website": "https://www.cloudflare.com/dns/dnssec/how-dnssec-works/"
-    },
-    {
-      "name": "Pardot Sending Domain",
-      "category": "Marketing Automation",
-      "description": "Salesforce Pardot email sending domain verification",
-      "recordTypes": ["TXT"],
-      "patterns": [
-        "sending_domain[0-9]+=.*"
-      ],
-      "website": "https://www.pardot.com"
     },
     {
       "name": "Twilio",
@@ -3005,7 +3046,10 @@
       "description": "Salesforce Pardot marketing automation",
       "recordTypes": ["TXT"],
       "patterns": [
-        "pardot_[0-9]+_\\*=[a-f0-9]+"
+        "pardot_[0-9]+_\\*=[a-f0-9]+",
+        "sending_domain[0-9]+=.*",
+        "include:aspmx\\.pardot\\.com",
+        "pardot[0-9]+=.*"
       ],
       "website": "https://www.pardot.com"
     },
@@ -3530,7 +3574,8 @@
       "recordTypes": ["MX", "TXT"],
       "patterns": [
         "mx\\.zoho\\.com",
-        "zoho-verification=.*"
+        "zoho-verification=.*",
+        "include:transmail\\.net"
       ],
       "website": "https://www.zoho.com/mail/"
     },
