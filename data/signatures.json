@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "JangoMail",
+      "category": "Email Marketing",
+      "description": "JangoMail email marketing and mass email service",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "include:jangomail\\.com"
+      ],
+      "website": "https://www.jangomail.com"
+    },
+    {
       "name": "Pendo",
       "category": "Analytics",
       "description": "Pendo product analytics and digital adoption platform",
@@ -2854,7 +2864,8 @@
       "description": "Mailgun email delivery service",
       "recordTypes": ["TXT"],
       "patterns": [
-        "mgverify=.*"
+        "mgverify=.*",
+        "include:mailgun\\.org"
       ],
       "website": "https://www.mailgun.com"
     },
