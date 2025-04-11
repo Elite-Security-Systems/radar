@@ -1,6 +1,16 @@
 {
   "signatures": [
     {
+      "name": "Paddle",
+      "category": "Payment Processing",
+      "description": "Paddle payment processing and software licensing platform for SaaS businesses",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "paddle-verification=.*"
+      ],
+      "website": "https://www.paddle.com"
+    },
+    {
       "name": "Box",
       "category": "Cloud Storage",
       "description": "Box cloud content management and file sharing service",
@@ -273,8 +283,7 @@
       "recordTypes": ["MX", "TXT"],
       "patterns": [
         "mx[0-9]+\\.messagelabs\\.com$",
-        "include:spf\\.messagelabs\\.com",
-        "include:spf\\.protection\\.outlook\\.com"
+        "include:spf\\.messagelabs\\.com"
       ],
       "website": "https://www.broadcom.com/products/cyber-security/email"
     },
@@ -3131,7 +3140,8 @@
       "description": "Cloudflare DNS hosting service",
       "recordTypes": ["NS"],
       "patterns": [
-        "\\.ns\\.cloudflare\\.com\\.$"
+        "\\.ns\\.cloudflare\\.com\\.$",
+        "cloudflare-verify.*"
       ],
       "website": "https://www.cloudflare.com/dns/"
     },
@@ -3275,17 +3285,6 @@
         "include:.*\\.rp\\.oracleemaildelivery\\.com"
       ],
       "website": "https://www.oracle.com/cloud/networking/email-delivery/"
-    },
-    {
-      "name": "Cloudflare",
-      "category": "CDN & Security",
-      "description": "Cloudflare CDN and security services",
-      "recordTypes": ["NS", "TXT"],
-      "patterns": [
-        "\\.ns\\.cloudflare\\.com$",
-        "cloudflare-verify.*"
-      ],
-      "website": "https://www.cloudflare.com"
     },
     {
       "name": "AWS",
@@ -3532,16 +3531,6 @@
         "v=BIMI1.*"
       ],
       "website": "https://bimigroup.org/"
-    },
-    {
-      "name": "Microsoft Exchange Online Protection",
-      "category": "Email Security",
-      "description": "Microsoft Exchange Online email filtering service",
-      "recordTypes": ["MX"],
-      "patterns": [
-        ".*mail\\.protection\\.outlook\\.com"
-      ],
-      "website": "https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/eop/exchange-online-protection-overview"
     },
     {
       "name": "ProtonMail",
