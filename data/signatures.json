@@ -1,6 +1,26 @@
 {
   "signatures": [
     {
+      "name": "Pendo",
+      "category": "Analytics",
+      "description": "Pendo product analytics and digital adoption platform",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "pendo-domain-verification=.*"
+      ],
+      "website": "https://www.pendo.io"
+    },
+    {
+      "name": "WeWork",
+      "category": "Workspace",
+      "description": "WeWork flexible workspace and office solutions",
+      "recordTypes": ["TXT"],
+      "patterns": [
+        "wework-site-verification=.*"
+      ],
+      "website": "https://www.wework.com"
+    },
+    {
       "name": "Palo Alto Cortex XDR",
       "category": "Security",
       "description": "Palo Alto Networks Cortex XDR platform",
@@ -175,6 +195,18 @@
         "tripwire-domain-verification=.*"
       ],
       "website": "https://www.tripwire.com"
+    },
+    {
+      "name": "Symantec Email Security",
+      "category": "Email Security",
+      "description": "Symantec/Broadcom email security service",
+      "recordTypes": ["MX", "TXT"],
+      "patterns": [
+        "mx[0-9]+\\.messagelabs\\.com$",
+        "include:spf\\.messagelabs\\.com",
+        "include:spf\\.protection\\.outlook\\.com"
+      ],
+      "website": "https://www.broadcom.com/products/cyber-security/email"
     },
     {
       "name": "FIDO Security Keys",
@@ -2720,7 +2752,8 @@
       "recordTypes": ["TXT"],
       "patterns": [
         "include:amazonses\\.com",
-        "inbound-smtp\\.[a-z0-9-]+\\.amazonaws\\.com"
+        "inbound-smtp\\.[a-z0-9-]+\\.amazonaws\\.com",
+        "amazonses:.*"
       ],
       "website": "https://aws.amazon.com/ses/"
     },
@@ -3414,6 +3447,16 @@
         ".*"
       ],
       "website": "https://www.internetsociety.org/deploy360/ipv6/"
+    },
+    {
+      "name": "SRV Services",
+      "category": "Service Discovery",
+      "description": "Service records indicate specific protocols/services",
+      "recordTypes": ["SRV"],
+      "patterns": [
+        ".*"
+      ],
+      "website": "https://en.wikipedia.org/wiki/SRV_record"
     },
     {
       "name": "DMARC Policy",
